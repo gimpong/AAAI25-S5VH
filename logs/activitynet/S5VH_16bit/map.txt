@@ -1,0 +1,18 @@
+2024-12-13 17:26:09,059 - INFO - Self Supervised Video Hashing Evaluation: S5VH
+2024-12-13 17:26:09,060 - INFO - set seed: 1
+2024-12-13 17:26:09,060 - INFO - PARAMETER ......
+2024-12-13 17:26:09,060 - INFO - Config (path: /data2/lianniu/S5VH/configs/S5VH/act.py): {'model_name': 'S5VH', 'use_checkpoint': None, 'feature_size': 2048, 'hidden_size': 256, 'max_frames': 30, 'nbits': 16, 'S5VH_type': 'small', 'dataset': 'activitynet', 'workers': 1, 'batch_size': 128, 'mask_ratio': 0.5, 'latent_dim_pca': 512, 'initWithCSQ': True, 'rho': 5e-05, 'gamma': 1.618033988749895, 'seed': 1, 'num_epochs': 350, 'alpha': 0.2, 'temperature': 0.5, 'tau_plus': 0.05, 'train_num_sample': 9722, 'a_cluster': 0.001, 'temperature_cluster': 0.5, 'nclusters': 100, 'warm_up_epoch': 50, 'smoothing_alpha': 0.01, 'test_batch_size': 128, 'test_num_sample': 3758, 'query_num_sample': 1000, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'data_root': '/data2/lianniu/dataset/act/', 'home_root': '/data2/lianniu/', 'train_feat_path': '/data2/lianniu/dataset/act/train_feats.h5', 'train_assist_path': '/data2/lianniu/dataset/act/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/act/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/act/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/act/final_train_sim_matrix.h5', 'semantic_center_path': '/data2/lianniu/dataset/act/semantic.h5', 'hash_center_path': '/data2/lianniu/dataset/act/hash_center_16.h5', 'im2cluster_path': '/data2/lianniu/dataset/act/im2cluster.h5', 'test_feat_path': ['/data2/lianniu/dataset/act/test_feats.h5'], 'label_path': ['/data2/lianniu/dataset/act/re_label.mat'], 'query_feat_path': ['/data2/lianniu/dataset/act/query_feats.h5'], 'query_label_path': ['/data2/lianniu/dataset/act/q_label.mat'], 'save_dir': '/data2/lianniu/saved_model/activitynet/S5VH', 'file_path': '/data2/lianniu/saved_model/activitynet/S5VH_16bit'}
+2024-12-13 17:26:09,060 - INFO - loading model ......
+2024-12-13 17:26:12,615 - INFO - eval data number: 3758
+2024-12-13 17:26:15,352 - INFO - loading query data ......
+2024-12-13 17:26:15,969 - INFO - retrieval costs: 3.3527657985687256
+2024-12-13 17:26:16,082 - INFO - hamming distance computation costs: 0.11276698112487793
+2024-12-13 17:26:16,256 - INFO - hamming ranking costs: 0.17457222938537598
+2024-12-13 17:26:16,257 - INFO - labels shape: (1000, 200) and (3758, 200)
+2024-12-13 17:26:16,826 - INFO - similarity labels generation costs: 0.5691120624542236
+2024-12-13 17:26:16,843 - INFO - topK: 5:, map: 0.18003333333333335
+2024-12-13 17:26:16,902 - INFO - topK: 20:, map: 0.09651328338929731
+2024-12-13 17:26:17,024 - INFO - topK: 40:, map: 0.05935685464186547
+2024-12-13 17:26:17,204 - INFO - topK: 60:, map: 0.043524573414243005
+2024-12-13 17:26:17,445 - INFO - topK: 80:, map: 0.03403165103519765
+2024-12-13 17:26:17,736 - INFO - topK: 100:, map: 0.02788628404001222

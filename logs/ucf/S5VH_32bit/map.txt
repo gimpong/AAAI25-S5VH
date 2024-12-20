@@ -1,0 +1,36 @@
+2024-12-13 15:53:39,376 - INFO - Self Supervised Video Hashing Evaluation: S5VH
+2024-12-13 15:53:39,377 - INFO - set seed: 1
+2024-12-13 15:53:39,377 - INFO - PARAMETER ......
+2024-12-13 15:53:39,377 - INFO - Config (path: /data2/lianniu/S5VH/configs/S5VH/ucf.py): {'model_name': 'S5VH', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 32, 'S5VH_type': 'small', 'dataset': 'ucf', 'workers': 12, 'batch_size': 128, 'mask_ratio': 0.5, 'latent_dim_pca': 512, 'initWithCSQ': True, 'rho': 5e-05, 'gamma': 1.618033988749895, 'seed': 1, 'num_epochs': 350, 'alpha': 1.0, 'temperature': 0.5, 'tau_plus': 0.1, 'train_num_sample': 9537, 'a_cluster': 0.1, 'temperature_cluster': 0.5, 'nclusters': 101, 'warm_up_epoch': 50, 'smoothing_alpha': 0.01, 'test_batch_size': 128, 'test_num_sample': 9537, 'query_num_sample': 3783, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'data_root': '/data2/lianniu/dataset/ucf4/', 'home_root': '/data2/lianniu/', 'train_feat_path': '/data2/lianniu/dataset/ucf4/ucf_train_feats.h5', 'train_assist_path': '/data2/lianniu/dataset/ucf4/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/ucf4/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/ucf4/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/ucf4/final_train_sim_matrix.h5', 'semantic_center_path': '/data2/lianniu/dataset/ucf4/semantic.h5', 'hash_center_path': '/data2/lianniu/dataset/ucf4/hash_center_32.h5', 'im2cluster_path': '/data2/lianniu/dataset/ucf4/im2cluster.h5', 'test_feat_path': ['/data2/lianniu/dataset/ucf4/ucf_train_feats.h5'], 'label_path': ['/data2/lianniu/dataset/ucf4/ucf_train_labels.mat'], 'query_feat_path': ['/data2/lianniu/dataset/ucf4/ucf_test_feats.h5'], 'query_label_path': ['/data2/lianniu/dataset/ucf4/ucf_test_labels.mat'], 'save_dir': '/data2/lianniu/saved_model/ucf/S5VH', 'file_path': '/data2/lianniu/saved_model/ucf/S5VH_32bit'}
+2024-12-13 15:53:39,377 - INFO - loading model ......
+2024-12-13 15:53:46,356 - INFO - eval data number: 9537
+2024-12-13 15:53:53,515 - INFO - loading query data ......
+2024-12-13 15:53:57,483 - INFO - retrieval costs: 11.12515926361084
+2024-12-13 15:53:58,195 - INFO - hamming distance computation costs: 0.7121009826660156
+2024-12-13 15:53:59,258 - INFO - hamming ranking costs: 1.0634346008300781
+2024-12-13 15:53:59,258 - INFO - labels shape: (3783, 101) and (9537, 101)
+2024-12-13 15:54:02,094 - INFO - similarity labels generation costs: 2.8359694480895996
+2024-12-13 15:54:02,155 - INFO - topK: 5:, map: 0.53368843069874
+2024-12-13 15:54:02,371 - INFO - topK: 20:, map: 0.457054043446617
+2024-12-13 15:54:02,783 - INFO - topK: 40:, map: 0.40647522740257086
+2024-12-13 15:54:03,398 - INFO - topK: 60:, map: 0.3686290019042875
+2024-12-13 15:54:04,207 - INFO - topK: 80:, map: 0.3301452804866463
+2024-12-13 15:54:05,216 - INFO - topK: 100:, map: 0.2905367519121897
+2024-12-13 15:56:02,894 - INFO - Self Supervised Video Hashing Evaluation: S5VH
+2024-12-13 15:56:02,895 - INFO - set seed: 1
+2024-12-13 15:56:02,895 - INFO - PARAMETER ......
+2024-12-13 15:56:02,895 - INFO - Config (path: /data2/lianniu/S5VH/configs/S5VH/ucf.py): {'model_name': 'S5VH', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 32, 'S5VH_type': 'small', 'dataset': 'ucf', 'workers': 12, 'batch_size': 128, 'mask_ratio': 0.5, 'latent_dim_pca': 512, 'initWithCSQ': True, 'rho': 5e-05, 'gamma': 1.618033988749895, 'seed': 1, 'num_epochs': 350, 'alpha': 1.0, 'temperature': 0.5, 'tau_plus': 0.1, 'train_num_sample': 9537, 'a_cluster': 0.1, 'temperature_cluster': 0.5, 'nclusters': 101, 'warm_up_epoch': 50, 'smoothing_alpha': 0.01, 'test_batch_size': 128, 'test_num_sample': 9537, 'query_num_sample': 3783, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'data_root': '/data2/lianniu/dataset/ucf4/', 'home_root': '/data2/lianniu/', 'train_feat_path': '/data2/lianniu/dataset/ucf4/ucf_train_feats.h5', 'train_assist_path': '/data2/lianniu/dataset/ucf4/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/ucf4/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/ucf4/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/ucf4/final_train_sim_matrix.h5', 'semantic_center_path': '/data2/lianniu/dataset/ucf4/semantic.h5', 'hash_center_path': '/data2/lianniu/dataset/ucf4/hash_center_32.h5', 'im2cluster_path': '/data2/lianniu/dataset/ucf4/im2cluster.h5', 'test_feat_path': ['/data2/lianniu/dataset/ucf4/ucf_train_feats.h5'], 'label_path': ['/data2/lianniu/dataset/ucf4/ucf_train_labels.mat'], 'query_feat_path': ['/data2/lianniu/dataset/ucf4/ucf_test_feats.h5'], 'query_label_path': ['/data2/lianniu/dataset/ucf4/ucf_test_labels.mat'], 'save_dir': '/data2/lianniu/saved_model/ucf/S5VH', 'file_path': '/data2/lianniu/saved_model/ucf/S5VH_32bit'}
+2024-12-13 15:56:02,895 - INFO - loading model ......
+2024-12-13 15:56:10,302 - INFO - eval data number: 9537
+2024-12-13 15:56:19,650 - INFO - loading query data ......
+2024-12-13 15:56:24,006 - INFO - retrieval costs: 13.702123403549194
+2024-12-13 15:56:24,735 - INFO - hamming distance computation costs: 0.7289612293243408
+2024-12-13 15:56:25,807 - INFO - hamming ranking costs: 1.071753740310669
+2024-12-13 15:56:25,807 - INFO - labels shape: (3783, 101) and (9537, 101)
+2024-12-13 15:56:28,761 - INFO - similarity labels generation costs: 2.953993082046509
+2024-12-13 15:56:28,822 - INFO - topK: 5:, map: 0.53368843069874
+2024-12-13 15:56:29,048 - INFO - topK: 20:, map: 0.457054043446617
+2024-12-13 15:56:29,474 - INFO - topK: 40:, map: 0.40647522740257086
+2024-12-13 15:56:30,124 - INFO - topK: 60:, map: 0.3686290019042875
+2024-12-13 15:56:30,976 - INFO - topK: 80:, map: 0.3301452804866463
+2024-12-13 15:56:32,139 - INFO - topK: 100:, map: 0.2905367519121897

@@ -1,0 +1,57 @@
+2024-05-24 10:55:37,974 - INFO - Self Supervised Video Hashing Evaluation: conmh
+2024-05-24 10:55:37,976 - INFO - set seed: 1
+2024-05-24 10:55:37,976 - INFO - PARAMETER ......
+2024-05-24 10:55:37,976 - INFO - Config (path: /data2/lianniu/Clusters_learning/configs/conmh_fcv.py): {'model_name': 'conmh', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 16, 'transformer_type': 'small', 'dataset': 'fcv', 'workers': 1, 'batch_size': 512, 'mask_prob': 0.3, 'seed': 1, 'num_epochs': 500, 'a': 2.5, 'temperature': 0.5, 'tau_plus': 0.1, 'a_cluster': 0.001, 'temperature_cluster': 0.5, 'nclusters': 450, 'train_num_sample': 45585, 'test_batch_size': 128, 'test_num_sample': 45600, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'lr_decay_rate': 20, 'lr_decay_gamma': 0.9, 'weight_decay': 0.0, 'data_root': '/data2/lianniu/dataset/fcv/', 'home_root': '/data2/lianniu/conmh/', 'train_feat_path': ['/data2/lianniu/dataset/fcv/fcv_train_feats.h5'], 'test_feat_path': ['/data2/lianniu/dataset/fcv/fcv_test_feats.h5'], 'label_path': ['/data2/lianniu/dataset/fcv/fcv_test_labels.mat'], 'train_assist_path': '/data2/lianniu/dataset/fcv/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/fcv/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/fcv/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/fcv/final_train_sim_matrix.h5', 'save_dir': '/data2/lianniu/conmh/saved_model/clusters_learning_fcv', 'file_path': '/data2/lianniu/conmh/saved_model/clusters_learning_fcv_16bit'}
+2024-05-24 10:55:37,976 - INFO - loading model ......
+2024-05-24 10:56:03,722 - INFO - eval data number: 45600
+2024-05-24 10:56:39,755 - INFO - retrieval costs: 36.01608061790466
+2024-05-24 10:56:49,820 - INFO - hamming distance computation costs: 10.064880132675171
+2024-05-24 10:57:02,906 - INFO - hamming ranking costs: 13.08656120300293
+2024-05-24 10:57:02,906 - INFO - labels shape: (45600, 239)
+2024-05-24 10:58:35,482 - INFO - similarity labels generation costs: 92.57574272155762
+2024-05-24 10:58:35,632 - INFO - topK: 5:, map: 0.34511250000000004
+2024-05-24 10:58:36,161 - INFO - topK: 20:, map: 0.23969436149650786
+2024-05-24 10:58:37,202 - INFO - topK: 40:, map: 0.20784582255470416
+2024-05-24 10:58:38,746 - INFO - topK: 60:, map: 0.19009591012811253
+2024-05-24 10:58:40,814 - INFO - topK: 80:, map: 0.17701069874580388
+2024-05-24 10:58:43,391 - INFO - topK: 100:, map: 0.16613216460947974
+2024-05-24 11:05:53,223 - INFO - Self Supervised Video Hashing Evaluation: conmh
+2024-05-24 11:05:53,224 - INFO - set seed: 1
+2024-05-24 11:05:53,224 - INFO - PARAMETER ......
+2024-05-24 11:05:53,224 - INFO - Config (path: /data2/lianniu/Clusters_learning/configs/conmh_fcv.py): {'model_name': 'conmh', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 16, 'transformer_type': 'small', 'dataset': 'fcv', 'workers': 1, 'batch_size': 512, 'mask_prob': 0.3, 'seed': 1, 'num_epochs': 500, 'a': 2.5, 'temperature': 0.5, 'tau_plus': 0.1, 'a_cluster': 0.001, 'temperature_cluster': 0.5, 'nclusters': 450, 'train_num_sample': 45585, 'test_batch_size': 128, 'test_num_sample': 45600, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'lr_decay_rate': 20, 'lr_decay_gamma': 0.9, 'weight_decay': 0.0, 'data_root': '/data2/lianniu/dataset/fcv/', 'home_root': '/data2/lianniu/', 'train_feat_path': ['/data2/lianniu/dataset/fcv/fcv_train_feats.h5'], 'test_feat_path': ['/data2/lianniu/dataset/fcv/fcv_test_feats.h5'], 'label_path': ['/data2/lianniu/dataset/fcv/fcv_test_labels.mat'], 'train_assist_path': '/data2/lianniu/dataset/fcv/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/fcv/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/fcv/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/fcv/final_train_sim_matrix.h5', 'save_dir': '/data2/lianniu/saved_model/clusters_learning_fcv', 'file_path': '/data2/lianniu/saved_model/clusters_learning_fcv_16bit'}
+2024-05-24 11:05:53,224 - INFO - loading model ......
+2024-05-24 11:06:08,581 - INFO - eval data number: 45600
+2024-05-24 11:06:44,068 - INFO - Self Supervised Video Hashing Evaluation: conmh
+2024-05-24 11:06:44,069 - INFO - set seed: 1
+2024-05-24 11:06:44,069 - INFO - PARAMETER ......
+2024-05-24 11:06:44,069 - INFO - Config (path: /data2/lianniu/Clusters_learning/configs/conmh_fcv.py): {'model_name': 'conmh', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 16, 'transformer_type': 'small', 'dataset': 'fcv', 'workers': 1, 'batch_size': 512, 'mask_prob': 0.3, 'seed': 1, 'num_epochs': 500, 'a': 2.5, 'temperature': 0.5, 'tau_plus': 0.1, 'a_cluster': 0.001, 'temperature_cluster': 0.5, 'nclusters': 450, 'train_num_sample': 45585, 'test_batch_size': 128, 'test_num_sample': 45600, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'lr_decay_rate': 20, 'lr_decay_gamma': 0.9, 'weight_decay': 0.0, 'data_root': '/data2/lianniu/dataset/fcv/', 'home_root': '/data2/lianniu/', 'train_feat_path': ['/data2/lianniu/dataset/fcv/fcv_train_feats.h5'], 'test_feat_path': ['/data2/lianniu/dataset/fcv/fcv_test_feats.h5'], 'label_path': ['/data2/lianniu/dataset/fcv/fcv_test_labels.mat'], 'train_assist_path': '/data2/lianniu/dataset/fcv/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/fcv/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/fcv/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/fcv/final_train_sim_matrix.h5', 'save_dir': '/data2/lianniu/saved_model/clusters_learning_fcv', 'file_path': '/data2/lianniu/saved_model/clusters_learning_fcv_16bit'}
+2024-05-24 11:06:44,069 - INFO - loading model ......
+2024-05-24 11:06:57,120 - INFO - eval data number: 45600
+2024-05-24 11:07:15,418 - INFO - retrieval costs: 18.289007663726807
+2024-05-24 11:07:17,337 - INFO - hamming distance computation costs: 1.918804407119751
+2024-05-24 11:07:23,252 - INFO - hamming ranking costs: 5.915154218673706
+2024-05-24 11:07:23,252 - INFO - labels shape: (45600, 239)
+2024-05-24 11:07:57,775 - INFO - similarity labels generation costs: 34.5227313041687
+2024-05-24 11:07:57,868 - INFO - topK: 5:, map: 0.34511250000000004
+2024-05-24 11:07:58,192 - INFO - topK: 20:, map: 0.23969436149650786
+2024-05-24 11:07:58,830 - INFO - topK: 40:, map: 0.20784582255470416
+2024-05-24 11:07:59,761 - INFO - topK: 60:, map: 0.19009591012811253
+2024-05-24 11:08:00,997 - INFO - topK: 80:, map: 0.17701069874580388
+2024-05-24 11:08:02,534 - INFO - topK: 100:, map: 0.16613216460947974
+2024-05-24 11:17:23,018 - INFO - Self Supervised Video Hashing Evaluation: conmh
+2024-05-24 11:17:23,019 - INFO - set seed: 1
+2024-05-24 11:17:23,019 - INFO - PARAMETER ......
+2024-05-24 11:17:23,019 - INFO - Config (path: /data2/lianniu/Clusters_learning/configs/conmh_fcv.py): {'model_name': 'conmh', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 16, 'transformer_type': 'small', 'dataset': 'fcv', 'workers': 1, 'batch_size': 512, 'mask_prob': 0.3, 'seed': 1, 'num_epochs': 500, 'a': 2.5, 'temperature': 0.5, 'tau_plus': 0.1, 'a_cluster': 0.001, 'temperature_cluster': 0.5, 'nclusters': 450, 'train_num_sample': 45585, 'test_batch_size': 128, 'test_num_sample': 45600, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'lr_decay_rate': 20, 'lr_decay_gamma': 0.9, 'weight_decay': 0.0, 'data_root': '/data2/lianniu/dataset/fcv/', 'home_root': '/data2/lianniu/', 'train_feat_path': ['/data2/lianniu/dataset/fcv/fcv_train_feats.h5'], 'test_feat_path': ['/data2/lianniu/dataset/fcv/fcv_test_feats.h5'], 'label_path': ['/data2/lianniu/dataset/fcv/fcv_test_labels.mat'], 'train_assist_path': '/data2/lianniu/dataset/fcv/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/fcv/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/fcv/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/fcv/final_train_sim_matrix.h5', 'save_dir': '/data2/lianniu/saved_model/clusters_learning_fcv', 'file_path': '/data2/lianniu/saved_model/clusters_learning_fcv_16bit'}
+2024-05-24 11:17:23,019 - INFO - loading model ......
+2024-05-24 11:17:35,719 - INFO - eval data number: 45600
+2024-05-24 11:17:55,322 - INFO - retrieval costs: 19.593346118927002
+2024-05-24 11:18:24,124 - INFO - hamming distance computation costs: 28.802016973495483
+2024-05-24 11:19:32,987 - INFO - hamming ranking costs: 68.862708568573
+2024-05-24 11:19:32,987 - INFO - labels shape: (45600, 239)
+2024-05-24 11:26:18,485 - INFO - similarity labels generation costs: 405.4981210231781
+2024-05-24 11:26:19,326 - INFO - topK: 5:, map: 0.34645197368421055
+2024-05-24 11:26:22,212 - INFO - topK: 20:, map: 0.24567180169170313
+2024-05-24 11:26:27,855 - INFO - topK: 40:, map: 0.21433588974945916
+2024-05-24 11:26:36,265 - INFO - topK: 60:, map: 0.1965674446278812
+2024-05-24 11:26:47,487 - INFO - topK: 80:, map: 0.18351066741333744
+2024-05-24 11:27:01,518 - INFO - topK: 100:, map: 0.17259785449978027

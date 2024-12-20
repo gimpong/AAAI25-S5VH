@@ -1,0 +1,36 @@
+2024-12-13 01:21:42,629 - INFO - Self Supervised Video Hashing Evaluation: S5VH
+2024-12-13 01:21:42,630 - INFO - set seed: 1
+2024-12-13 01:21:42,630 - INFO - PARAMETER ......
+2024-12-13 01:21:42,630 - INFO - Config (path: /data2/lianniu/S5VH/configs/S5VH/hmdb.py): {'model_name': 'S5VH', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 64, 'S5VH_type': 'small', 'dataset': 'hmdb', 'workers': 1, 'batch_size': 128, 'mask_ratio': 0.5, 'latent_dim_pca': 512, 'initWithCSQ': True, 'rho': 5e-05, 'gamma': 1.618033988749895, 'seed': 1, 'num_epochs': 350, 'alpha': 1, 'temperature': 0.5, 'tau_plus': 0.05, 'train_num_sample': 3570, 'a_cluster': 0.1, 'temperature_cluster': 0.5, 'nclusters': 100, 'warm_up_epoch': 50, 'smoothing_alpha': 0.01, 'test_batch_size': 128, 'test_num_sample': 3570, 'query_num_sample': 1530, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'data_root': '/data2/lianniu/dataset/hmdb4/', 'home_root': '/data2/lianniu/', 'train_feat_path': '/data2/lianniu/dataset/hmdb4/hmdb_train_feats.h5', 'train_assist_path': '/data2/lianniu/dataset/hmdb4/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/hmdb4/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/hmdb4/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/hmdb4/final_train_sim_matrix.h5', 'semantic_center_path': '/data2/lianniu/dataset/hmdb4/semantic.h5', 'hash_center_path': '/data2/lianniu/dataset/hmdb4/hash_center_64.h5', 'im2cluster_path': '/data2/lianniu/dataset/hmdb4/im2cluster.h5', 'test_feat_path': ['/data2/lianniu/dataset/hmdb4/hmdb_train_feats.h5'], 'label_path': ['/data2/lianniu/dataset/hmdb4/hmdb_train_labels.mat'], 'query_feat_path': ['/data2/lianniu/dataset/hmdb4/hmdb_test_feats.h5'], 'query_label_path': ['/data2/lianniu/dataset/hmdb4/hmdb_test_labels.mat'], 'save_dir': '/data2/lianniu/saved_model/hmdb/S5VH', 'file_path': '/data2/lianniu/saved_model/hmdb/S5VH_64bit'}
+2024-12-13 01:21:42,630 - INFO - loading model ......
+2024-12-13 01:21:46,323 - INFO - eval data number: 3570
+2024-12-13 01:21:49,271 - INFO - loading query data ......
+2024-12-13 01:21:50,305 - INFO - retrieval costs: 3.9810476303100586
+2024-12-13 01:21:50,453 - INFO - hamming distance computation costs: 0.14744138717651367
+2024-12-13 01:21:50,559 - INFO - hamming ranking costs: 0.10625624656677246
+2024-12-13 01:21:50,559 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:21:50,767 - INFO - similarity labels generation costs: 0.20803332328796387
+2024-12-13 01:21:50,799 - INFO - topK: 5:, map: 0.256281045751634
+2024-12-13 01:21:50,912 - INFO - topK: 20:, map: 0.18880632174444018
+2024-12-13 01:21:51,133 - INFO - topK: 40:, map: 0.15031906837435272
+2024-12-13 01:21:51,458 - INFO - topK: 60:, map: 0.1236753690961455
+2024-12-13 01:21:51,891 - INFO - topK: 80:, map: 0.10287342924669607
+2024-12-13 01:21:52,431 - INFO - topK: 100:, map: 0.08789364583191578
+2024-12-14 13:57:15,472 - INFO - Self Supervised Video Hashing Evaluation: S5VH
+2024-12-14 13:57:15,472 - INFO - set seed: 1
+2024-12-14 13:57:15,472 - INFO - PARAMETER ......
+2024-12-14 13:57:15,472 - INFO - Config (path: /data2/lianniu/S5VH/configs/S5VH/hmdb.py): {'model_name': 'S5VH', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 64, 'S5VH_type': 'small', 'dataset': 'hmdb', 'workers': 1, 'batch_size': 128, 'mask_ratio': 0.5, 'latent_dim_pca': 4096, 'initWithCSQ': True, 'rho': 5e-05, 'gamma': 1.618033988749895, 'seed': 1, 'num_epochs': 350, 'alpha': 1, 'temperature': 0.5, 'tau_plus': 0.05, 'train_num_sample': 3570, 'a_cluster': 0.1, 'temperature_cluster': 0.5, 'nclusters': 100, 'warm_up_epoch': 50, 'smoothing_alpha': 0.01, 'test_batch_size': 128, 'test_num_sample': 3570, 'query_num_sample': 1530, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'data_root': '/data2/lianniu/dataset/hmdb4/', 'home_root': '/data2/lianniu/', 'train_feat_path': '/data2/lianniu/dataset/hmdb4/hmdb_train_feats.h5', 'train_assist_path': '/data2/lianniu/dataset/hmdb4/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/hmdb4/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/hmdb4/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/hmdb4/final_train_sim_matrix.h5', 'semantic_center_path': '/data2/lianniu/dataset/hmdb4/semantic.h5', 'hash_center_path': '/data2/lianniu/dataset/hmdb4/hash_center_64.h5', 'im2cluster_path': '/data2/lianniu/dataset/hmdb4/im2cluster.h5', 'test_feat_path': ['/data2/lianniu/dataset/hmdb4/hmdb_train_feats.h5'], 'label_path': ['/data2/lianniu/dataset/hmdb4/hmdb_train_labels.mat'], 'query_feat_path': ['/data2/lianniu/dataset/hmdb4/hmdb_test_feats.h5'], 'query_label_path': ['/data2/lianniu/dataset/hmdb4/hmdb_test_labels.mat'], 'save_dir': '/data2/lianniu/saved_model/hmdb/S5VH', 'file_path': '/data2/lianniu/saved_model/hmdb/S5VH_64bit'}
+2024-12-14 13:57:15,473 - INFO - loading model ......
+2024-12-14 13:57:24,572 - INFO - eval data number: 3570
+2024-12-14 13:57:30,241 - INFO - loading query data ......
+2024-12-14 13:57:32,231 - INFO - retrieval costs: 7.656405210494995
+2024-12-14 13:57:32,556 - INFO - hamming distance computation costs: 0.32523250579833984
+2024-12-14 13:57:32,761 - INFO - hamming ranking costs: 0.20534682273864746
+2024-12-14 13:57:32,761 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-14 13:57:33,208 - INFO - similarity labels generation costs: 0.4467000961303711
+2024-12-14 13:57:33,271 - INFO - topK: 5:, map: 0.256281045751634
+2024-12-14 13:57:33,476 - INFO - topK: 20:, map: 0.18880632174444018
+2024-12-14 13:57:33,871 - INFO - topK: 40:, map: 0.15031906837435272
+2024-12-14 13:57:34,454 - INFO - topK: 60:, map: 0.1236753690961455
+2024-12-14 13:57:35,242 - INFO - topK: 80:, map: 0.10287342924669607
+2024-12-14 13:57:36,224 - INFO - topK: 100:, map: 0.08789364583191578

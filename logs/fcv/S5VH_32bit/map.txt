@@ -1,0 +1,34 @@
+2024-05-24 11:08:39,117 - INFO - Self Supervised Video Hashing Evaluation: S5VH
+2024-05-24 11:08:39,117 - INFO - set seed: 1
+2024-05-24 11:08:39,117 - INFO - PARAMETER ......
+2024-05-24 11:08:39,118 - INFO - Config (path: /data2/lianniu/S5VH/configs/S5VH_fcv.py): {'model_name': 'S5VH', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 32, 'transformer_type': 'small', 'dataset': 'fcv', 'workers': 1, 'batch_size': 512, 'mask_prob': 0.3, 'seed': 1, 'num_epochs': 500, 'a': 2.5, 'temperature': 0.5, 'tau_plus': 0.1, 'a_cluster': 0.001, 'temperature_cluster': 0.5, 'nclusters': 450, 'train_num_sample': 45585, 'test_batch_size': 128, 'test_num_sample': 45600, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'lr_decay_rate': 20, 'lr_decay_gamma': 0.9, 'weight_decay': 0.0, 'data_root': '/data2/lianniu/dataset/fcv/', 'home_root': '/data2/lianniu/', 'train_feat_path': ['/data2/lianniu/dataset/fcv/fcv_train_feats.h5'], 'test_feat_path': ['/data2/lianniu/dataset/fcv/fcv_test_feats.h5'], 'label_path': ['/data2/lianniu/dataset/fcv/fcv_test_labels.mat'], 'train_assist_path': '/data2/lianniu/dataset/fcv/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/fcv/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/fcv/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/fcv/final_train_sim_matrix.h5', 'save_dir': '/data2/lianniu/saved_model/S5VH_fcv', 'file_path': '/data2/lianniu/saved_model/S5VH_fcv_32bit'}
+2024-05-24 11:08:39,118 - INFO - loading model ......
+2024-05-24 11:08:51,160 - INFO - eval data number: 45600
+2024-05-24 11:09:09,784 - INFO - retrieval costs: 18.615644931793213
+2024-05-24 11:09:11,686 - INFO - hamming distance computation costs: 1.9016942977905273
+2024-05-24 11:09:17,327 - INFO - hamming ranking costs: 5.641191482543945
+2024-05-24 11:09:17,327 - INFO - labels shape: (45600, 239)
+2024-05-24 11:09:51,460 - INFO - similarity labels generation costs: 34.13276195526123
+2024-05-24 11:09:51,533 - INFO - topK: 5:, map: 0.479455
+2024-05-24 11:09:51,790 - INFO - topK: 20:, map: 0.32311164013435395
+2024-05-24 11:09:52,297 - INFO - topK: 40:, map: 0.278611789672389
+2024-05-24 11:09:53,051 - INFO - topK: 60:, map: 0.2547406507155931
+2024-05-24 11:09:54,044 - INFO - topK: 80:, map: 0.23748232742352973
+2024-05-24 11:09:55,290 - INFO - topK: 100:, map: 0.22277005748555853
+2024-05-24 11:15:34,326 - INFO - Self Supervised Video Hashing Evaluation: S5VH
+2024-05-24 11:15:34,327 - INFO - set seed: 1
+2024-05-24 11:15:34,327 - INFO - PARAMETER ......
+2024-05-24 11:15:34,327 - INFO - Config (path: /data2/lianniu/S5VH/configs/S5VH_fcv.py): {'model_name': 'S5VH', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 32, 'transformer_type': 'small', 'dataset': 'fcv', 'workers': 1, 'batch_size': 512, 'mask_prob': 0.3, 'seed': 1, 'num_epochs': 500, 'a': 2.5, 'temperature': 0.5, 'tau_plus': 0.1, 'a_cluster': 0.001, 'temperature_cluster': 0.5, 'nclusters': 450, 'train_num_sample': 45585, 'test_batch_size': 128, 'test_num_sample': 45600, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'lr_decay_rate': 20, 'lr_decay_gamma': 0.9, 'weight_decay': 0.0, 'data_root': '/data2/lianniu/dataset/fcv/', 'home_root': '/data2/lianniu/', 'train_feat_path': ['/data2/lianniu/dataset/fcv/fcv_train_feats.h5'], 'test_feat_path': ['/data2/lianniu/dataset/fcv/fcv_test_feats.h5'], 'label_path': ['/data2/lianniu/dataset/fcv/fcv_test_labels.mat'], 'train_assist_path': '/data2/lianniu/dataset/fcv/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/fcv/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/fcv/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/fcv/final_train_sim_matrix.h5', 'save_dir': '/data2/lianniu/saved_model/S5VH_fcv', 'file_path': '/data2/lianniu/saved_model/S5VH_fcv_32bit'}
+2024-05-24 11:15:34,327 - INFO - loading model ......
+2024-05-24 11:15:47,352 - INFO - eval data number: 45600
+2024-05-24 11:16:06,025 - INFO - retrieval costs: 18.66398024559021
+2024-05-24 11:16:33,761 - INFO - hamming distance computation costs: 27.735507249832153
+2024-05-24 11:17:46,870 - INFO - hamming ranking costs: 73.10878014564514
+2024-05-24 11:17:46,870 - INFO - labels shape: (45600, 239)
+2024-05-24 11:25:09,880 - INFO - similarity labels generation costs: 443.01016330718994
+2024-05-24 11:25:10,849 - INFO - topK: 5:, map: 0.48152273391812866
+2024-05-24 11:25:14,321 - INFO - topK: 20:, map: 0.329482486825315
+2024-05-24 11:25:20,997 - INFO - topK: 40:, map: 0.2854656894715622
+2024-05-24 11:25:30,988 - INFO - topK: 60:, map: 0.2627272102766131
+2024-05-24 11:25:44,128 - INFO - topK: 80:, map: 0.24584428182670245
+2024-05-24 11:26:00,595 - INFO - topK: 100:, map: 0.23144745196310101

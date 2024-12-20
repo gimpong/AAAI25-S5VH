@@ -1,0 +1,1578 @@
+2024-12-13 00:51:08,140 - INFO - Self Supervised Video Hashing Training: S5VH
+2024-12-13 00:51:08,140 - INFO - set seed: 1
+2024-12-13 00:51:08,140 - INFO - PARAMETER ......
+2024-12-13 00:51:08,140 - INFO - Config (path: /data2/lianniu/S5VH/configs/S5VH/hmdb.py): {'model_name': 'S5VH', 'use_checkpoint': None, 'feature_size': 4096, 'hidden_size': 256, 'max_frames': 25, 'nbits': 64, 'S5VH_type': 'small', 'dataset': 'hmdb', 'workers': 1, 'batch_size': 128, 'mask_ratio': 0.5, 'latent_dim_pca': 512, 'initWithCSQ': True, 'rho': 5e-05, 'gamma': 1.618033988749895, 'seed': 1, 'num_epochs': 350, 'alpha': 1, 'temperature': 0.5, 'tau_plus': 0.05, 'train_num_sample': 3570, 'a_cluster': 0.1, 'temperature_cluster': 0.5, 'nclusters': 100, 'warm_up_epoch': 50, 'smoothing_alpha': 0.01, 'test_batch_size': 128, 'test_num_sample': 3570, 'query_num_sample': 1530, 'optimizer_name': 'AdamW', 'schedule': 'CosineAnnealingLR', 'lr': 0.0005, 'min_lr': 1e-05, 'data_root': '/data2/lianniu/dataset/hmdb4/', 'home_root': '/data2/lianniu/', 'train_feat_path': '/data2/lianniu/dataset/hmdb4/hmdb_train_feats.h5', 'train_assist_path': '/data2/lianniu/dataset/hmdb4/final_train_train_assit.h5', 'latent_feat_path': '/data2/lianniu/dataset/hmdb4/final_train_latent_feats.h5', 'anchor_path': '/data2/lianniu/dataset/hmdb4/final_train_anchors.h5', 'sim_path': '/data2/lianniu/dataset/hmdb4/final_train_sim_matrix.h5', 'semantic_center_path': '/data2/lianniu/dataset/hmdb4/semantic.h5', 'hash_center_path': '/data2/lianniu/dataset/hmdb4/hash_center_64.h5', 'im2cluster_path': '/data2/lianniu/dataset/hmdb4/im2cluster.h5', 'test_feat_path': ['/data2/lianniu/dataset/hmdb4/hmdb_train_feats.h5'], 'label_path': ['/data2/lianniu/dataset/hmdb4/hmdb_train_labels.mat'], 'query_feat_path': ['/data2/lianniu/dataset/hmdb4/hmdb_test_feats.h5'], 'query_label_path': ['/data2/lianniu/dataset/hmdb4/hmdb_test_labels.mat'], 'save_dir': '/data2/lianniu/saved_model/hmdb/S5VH', 'file_path': '/data2/lianniu/saved_model/hmdb/S5VH_64bit'}
+2024-12-13 00:51:08,140 - INFO - loading model ......
+2024-12-13 00:51:10,582 - INFO - loading train data ......
+2024-12-13 00:51:11,490 - INFO - loading eval data ......
+2024-12-13 00:51:12,784 - INFO - begin training stage: [1/350]
+2024-12-13 00:51:17,511 - INFO - Epoch:[1/350] Step:[28/28] reconstruction_loss: 0.62 contra_loss: 3.44 contra_loss_cluster: 4.60
+2024-12-13 00:51:17,786 - INFO - now the learning rate is: 0.0004999901304618634
+2024-12-13 00:51:18,002 - INFO - begin training stage: [2/350]
+2024-12-13 00:51:21,497 - INFO - Epoch:[2/350] Step:[28/28] reconstruction_loss: 0.62 contra_loss: 3.36 contra_loss_cluster: 4.59
+2024-12-13 00:51:21,867 - INFO - now the learning rate is: 0.0004999605226426192
+2024-12-13 00:51:22,185 - INFO - begin training stage: [3/350]
+2024-12-13 00:51:25,637 - INFO - Epoch:[3/350] Step:[28/28] reconstruction_loss: 0.61 contra_loss: 3.35 contra_loss_cluster: 4.58
+2024-12-13 00:51:25,989 - INFO - now the learning rate is: 0.0004999111789277001
+2024-12-13 00:51:26,299 - INFO - begin training stage: [4/350]
+2024-12-13 00:51:29,804 - INFO - Epoch:[4/350] Step:[28/28] reconstruction_loss: 0.58 contra_loss: 3.33 contra_loss_cluster: 4.57
+2024-12-13 00:51:30,148 - INFO - now the learning rate is: 0.0004998421032926137
+2024-12-13 00:51:30,451 - INFO - begin training stage: [5/350]
+2024-12-13 00:51:33,953 - INFO - Epoch:[5/350] Step:[28/28] reconstruction_loss: 0.57 contra_loss: 3.31 contra_loss_cluster: 4.57
+2024-12-13 00:51:34,315 - INFO - now the learning rate is: 0.0004997533013026221
+2024-12-13 00:51:34,663 - INFO - begin training stage: [6/350]
+2024-12-13 00:51:38,130 - INFO - Epoch:[6/350] Step:[28/28] reconstruction_loss: 0.52 contra_loss: 3.31 contra_loss_cluster: 4.56
+2024-12-13 00:51:38,403 - INFO - now the learning rate is: 0.0004996447801122936
+2024-12-13 00:51:38,749 - INFO - begin training stage: [7/350]
+2024-12-13 00:51:42,215 - INFO - Epoch:[7/350] Step:[28/28] reconstruction_loss: 0.49 contra_loss: 3.31 contra_loss_cluster: 4.55
+2024-12-13 00:51:42,505 - INFO - now the learning rate is: 0.0004995165484649266
+2024-12-13 00:51:42,821 - INFO - begin training stage: [8/350]
+2024-12-13 00:51:46,235 - INFO - Epoch:[8/350] Step:[28/28] reconstruction_loss: 0.46 contra_loss: 3.28 contra_loss_cluster: 4.54
+2024-12-13 00:51:46,530 - INFO - now the learning rate is: 0.0004993686166918443
+2024-12-13 00:51:46,832 - INFO - begin training stage: [9/350]
+2024-12-13 00:51:50,244 - INFO - Epoch:[9/350] Step:[28/28] reconstruction_loss: 0.45 contra_loss: 3.29 contra_loss_cluster: 4.53
+2024-12-13 00:51:50,576 - INFO - now the learning rate is: 0.0004992009967115635
+2024-12-13 00:51:50,911 - INFO - begin training stage: [10/350]
+2024-12-13 00:51:54,286 - INFO - Epoch:[10/350] Step:[28/28] reconstruction_loss: 0.44 contra_loss: 3.28 contra_loss_cluster: 4.53
+2024-12-13 00:51:54,580 - INFO - now the learning rate is: 0.0004990137020288336
+2024-12-13 00:51:54,885 - INFO - begin training stage: [11/350]
+2024-12-13 00:51:58,332 - INFO - Epoch:[11/350] Step:[28/28] reconstruction_loss: 0.44 contra_loss: 3.27 contra_loss_cluster: 4.52
+2024-12-13 00:51:58,666 - INFO - now the learning rate is: 0.0004988067477335482
+2024-12-13 00:51:58,968 - INFO - begin training stage: [12/350]
+2024-12-13 00:52:02,412 - INFO - Epoch:[12/350] Step:[28/28] reconstruction_loss: 0.43 contra_loss: 3.25 contra_loss_cluster: 4.51
+2024-12-13 00:52:02,716 - INFO - now the learning rate is: 0.0004985801504995306
+2024-12-13 00:52:03,057 - INFO - begin training stage: [13/350]
+2024-12-13 00:52:06,483 - INFO - Epoch:[13/350] Step:[28/28] reconstruction_loss: 0.41 contra_loss: 3.27 contra_loss_cluster: 4.50
+2024-12-13 00:52:06,830 - INFO - now the learning rate is: 0.0004983339285831892
+2024-12-13 00:52:07,128 - INFO - begin training stage: [14/350]
+2024-12-13 00:52:10,538 - INFO - Epoch:[14/350] Step:[28/28] reconstruction_loss: 0.42 contra_loss: 3.24 contra_loss_cluster: 4.48
+2024-12-13 00:52:10,843 - INFO - now the learning rate is: 0.000498068101822047
+2024-12-13 00:52:11,148 - INFO - begin training stage: [15/350]
+2024-12-13 00:52:14,546 - INFO - Epoch:[15/350] Step:[28/28] reconstruction_loss: 0.40 contra_loss: 3.27 contra_loss_cluster: 4.48
+2024-12-13 00:52:14,869 - INFO - now the learning rate is: 0.000497782691633144
+2024-12-13 00:52:15,175 - INFO - begin training stage: [16/350]
+2024-12-13 00:52:18,614 - INFO - Epoch:[16/350] Step:[28/28] reconstruction_loss: 0.41 contra_loss: 3.26 contra_loss_cluster: 4.48
+2024-12-13 00:52:18,919 - INFO - now the learning rate is: 0.0004974777210113104
+2024-12-13 00:52:19,220 - INFO - begin training stage: [17/350]
+2024-12-13 00:52:22,698 - INFO - Epoch:[17/350] Step:[28/28] reconstruction_loss: 0.41 contra_loss: 3.23 contra_loss_cluster: 4.46
+2024-12-13 00:52:23,000 - INFO - now the learning rate is: 0.0004971532145273155
+2024-12-13 00:52:23,350 - INFO - begin training stage: [18/350]
+2024-12-13 00:52:26,777 - INFO - Epoch:[18/350] Step:[28/28] reconstruction_loss: 0.39 contra_loss: 3.26 contra_loss_cluster: 4.46
+2024-12-13 00:52:27,049 - INFO - now the learning rate is: 0.0004968091983258864
+2024-12-13 00:52:27,360 - INFO - begin training stage: [19/350]
+2024-12-13 00:52:30,794 - INFO - Epoch:[19/350] Step:[28/28] reconstruction_loss: 0.40 contra_loss: 3.24 contra_loss_cluster: 4.45
+2024-12-13 00:52:31,067 - INFO - now the learning rate is: 0.000496445700123603
+2024-12-13 00:52:31,371 - INFO - begin training stage: [20/350]
+2024-12-13 00:52:34,873 - INFO - Epoch:[20/350] Step:[28/28] reconstruction_loss: 0.41 contra_loss: 3.24 contra_loss_cluster: 4.44
+2024-12-13 00:52:35,172 - INFO - now the learning rate is: 0.0004960627492066642
+2024-12-13 00:52:35,517 - INFO - eval data number: 3570
+2024-12-13 00:52:37,523 - INFO - loading query data ......
+2024-12-13 00:52:38,613 - INFO - retrieval costs: 3.095433473587036
+2024-12-13 00:52:38,780 - INFO - hamming distance computation costs: 0.16668367385864258
+2024-12-13 00:52:38,892 - INFO - hamming ranking costs: 0.1125645637512207
+2024-12-13 00:52:38,893 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 00:52:39,103 - INFO - similarity labels generation costs: 0.2103588581085205
+2024-12-13 00:52:39,127 - INFO - topK: 5:, map: 0.1870087145969499
+2024-12-13 00:52:39,214 - INFO - topK: 20:, map: 0.1327312444684546
+2024-12-13 00:52:39,382 - INFO - topK: 40:, map: 0.10165860211051171
+2024-12-13 00:52:39,629 - INFO - topK: 60:, map: 0.08326594133216883
+2024-12-13 00:52:39,958 - INFO - topK: 80:, map: 0.07023780596706883
+2024-12-13 00:52:40,370 - INFO - topK: 100:, map: 0.06087301554075211
+2024-12-13 00:52:40,445 - INFO - begin training stage: [21/350]
+2024-12-13 00:52:43,889 - INFO - Epoch:[21/350] Step:[28/28] reconstruction_loss: 0.39 contra_loss: 3.23 contra_loss_cluster: 4.43
+2024-12-13 00:52:44,197 - INFO - now the learning rate is: 0.0004956603764285286
+2024-12-13 00:52:44,501 - INFO - begin training stage: [22/350]
+2024-12-13 00:52:47,952 - INFO - Epoch:[22/350] Step:[28/28] reconstruction_loss: 0.39 contra_loss: 3.27 contra_loss_cluster: 4.43
+2024-12-13 00:52:48,265 - INFO - now the learning rate is: 0.0004952386142074288
+2024-12-13 00:52:48,583 - INFO - begin training stage: [23/350]
+2024-12-13 00:52:52,021 - INFO - Epoch:[23/350] Step:[28/28] reconstruction_loss: 0.39 contra_loss: 3.25 contra_loss_cluster: 4.43
+2024-12-13 00:52:52,310 - INFO - now the learning rate is: 0.0004947974965237591
+2024-12-13 00:52:52,621 - INFO - begin training stage: [24/350]
+2024-12-13 00:52:56,074 - INFO - Epoch:[24/350] Step:[28/28] reconstruction_loss: 0.40 contra_loss: 3.26 contra_loss_cluster: 4.41
+2024-12-13 00:52:56,379 - INFO - now the learning rate is: 0.0004943370589173384
+2024-12-13 00:52:56,687 - INFO - begin training stage: [25/350]
+2024-12-13 00:53:00,116 - INFO - Epoch:[25/350] Step:[28/28] reconstruction_loss: 0.40 contra_loss: 3.25 contra_loss_cluster: 4.41
+2024-12-13 00:53:00,527 - INFO - now the learning rate is: 0.0004938573384845465
+2024-12-13 00:53:00,823 - INFO - begin training stage: [26/350]
+2024-12-13 00:53:04,278 - INFO - Epoch:[26/350] Step:[28/28] reconstruction_loss: 0.40 contra_loss: 3.24 contra_loss_cluster: 4.41
+2024-12-13 00:53:04,569 - INFO - now the learning rate is: 0.0004933583738753353
+2024-12-13 00:53:04,878 - INFO - begin training stage: [27/350]
+2024-12-13 00:53:08,341 - INFO - Epoch:[27/350] Step:[28/28] reconstruction_loss: 0.39 contra_loss: 3.23 contra_loss_cluster: 4.40
+2024-12-13 00:53:08,612 - INFO - now the learning rate is: 0.0004928402052901147
+2024-12-13 00:53:08,929 - INFO - begin training stage: [28/350]
+2024-12-13 00:53:12,376 - INFO - Epoch:[28/350] Step:[28/28] reconstruction_loss: 0.39 contra_loss: 3.23 contra_loss_cluster: 4.36
+2024-12-13 00:53:12,649 - INFO - now the learning rate is: 0.0004923028744765143
+2024-12-13 00:53:13,010 - INFO - begin training stage: [29/350]
+2024-12-13 00:53:16,429 - INFO - Epoch:[29/350] Step:[28/28] reconstruction_loss: 0.40 contra_loss: 3.23 contra_loss_cluster: 4.37
+2024-12-13 00:53:16,718 - INFO - now the learning rate is: 0.0004917464247260196
+2024-12-13 00:53:17,035 - INFO - begin training stage: [30/350]
+2024-12-13 00:53:20,571 - INFO - Epoch:[30/350] Step:[28/28] reconstruction_loss: 0.37 contra_loss: 3.24 contra_loss_cluster: 4.36
+2024-12-13 00:53:20,845 - INFO - now the learning rate is: 0.0004911709008704838
+2024-12-13 00:53:21,211 - INFO - begin training stage: [31/350]
+2024-12-13 00:53:24,721 - INFO - Epoch:[31/350] Step:[28/28] reconstruction_loss: 0.39 contra_loss: 3.22 contra_loss_cluster: 4.34
+2024-12-13 00:53:24,993 - INFO - now the learning rate is: 0.0004905763492785162
+2024-12-13 00:53:25,296 - INFO - begin training stage: [32/350]
+2024-12-13 00:53:28,765 - INFO - Epoch:[32/350] Step:[28/28] reconstruction_loss: 0.37 contra_loss: 3.22 contra_loss_cluster: 4.33
+2024-12-13 00:53:29,039 - INFO - now the learning rate is: 0.0004899628178517462
+2024-12-13 00:53:29,352 - INFO - begin training stage: [33/350]
+2024-12-13 00:53:32,824 - INFO - Epoch:[33/350] Step:[28/28] reconstruction_loss: 0.38 contra_loss: 3.22 contra_loss_cluster: 4.34
+2024-12-13 00:53:33,128 - INFO - now the learning rate is: 0.0004893303560209644
+2024-12-13 00:53:33,438 - INFO - begin training stage: [34/350]
+2024-12-13 00:53:36,929 - INFO - Epoch:[34/350] Step:[28/28] reconstruction_loss: 0.36 contra_loss: 3.22 contra_loss_cluster: 4.32
+2024-12-13 00:53:37,229 - INFO - now the learning rate is: 0.0004886790147421392
+2024-12-13 00:53:37,565 - INFO - begin training stage: [35/350]
+2024-12-13 00:53:41,100 - INFO - Epoch:[35/350] Step:[28/28] reconstruction_loss: 0.36 contra_loss: 3.21 contra_loss_cluster: 4.31
+2024-12-13 00:53:41,401 - INFO - now the learning rate is: 0.00048800884649231223
+2024-12-13 00:53:41,756 - INFO - begin training stage: [36/350]
+2024-12-13 00:53:45,234 - INFO - Epoch:[36/350] Step:[28/28] reconstruction_loss: 0.38 contra_loss: 3.22 contra_loss_cluster: 4.30
+2024-12-13 00:53:45,554 - INFO - now the learning rate is: 0.00048731990526537
+2024-12-13 00:53:45,865 - INFO - begin training stage: [37/350]
+2024-12-13 00:53:49,352 - INFO - Epoch:[37/350] Step:[28/28] reconstruction_loss: 0.37 contra_loss: 3.21 contra_loss_cluster: 4.29
+2024-12-13 00:53:49,653 - INFO - now the learning rate is: 0.0004866122465676939
+2024-12-13 00:53:50,000 - INFO - begin training stage: [38/350]
+2024-12-13 00:53:53,472 - INFO - Epoch:[38/350] Step:[28/28] reconstruction_loss: 0.36 contra_loss: 3.22 contra_loss_cluster: 4.28
+2024-12-13 00:53:53,746 - INFO - now the learning rate is: 0.00048588592741368814
+2024-12-13 00:53:54,100 - INFO - begin training stage: [39/350]
+2024-12-13 00:53:57,595 - INFO - Epoch:[39/350] Step:[28/28] reconstruction_loss: 0.36 contra_loss: 3.22 contra_loss_cluster: 4.28
+2024-12-13 00:53:57,902 - INFO - now the learning rate is: 0.0004851410063211859
+2024-12-13 00:53:58,268 - INFO - begin training stage: [40/350]
+2024-12-13 00:54:01,741 - INFO - Epoch:[40/350] Step:[28/28] reconstruction_loss: 0.37 contra_loss: 3.21 contra_loss_cluster: 4.26
+2024-12-13 00:54:02,015 - INFO - now the learning rate is: 0.0004843775433067352
+2024-12-13 00:54:02,328 - INFO - eval data number: 3570
+2024-12-13 00:54:04,358 - INFO - loading query data ......
+2024-12-13 00:54:05,504 - INFO - retrieval costs: 3.1756722927093506
+2024-12-13 00:54:05,631 - INFO - hamming distance computation costs: 0.12628793716430664
+2024-12-13 00:54:05,743 - INFO - hamming ranking costs: 0.11202430725097656
+2024-12-13 00:54:05,743 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 00:54:05,947 - INFO - similarity labels generation costs: 0.20447874069213867
+2024-12-13 00:54:05,972 - INFO - topK: 5:, map: 0.22045969498910675
+2024-12-13 00:54:06,059 - INFO - topK: 20:, map: 0.15767047883171237
+2024-12-13 00:54:06,229 - INFO - topK: 40:, map: 0.12104005343584444
+2024-12-13 00:54:06,481 - INFO - topK: 60:, map: 0.09802605571369488
+2024-12-13 00:54:06,815 - INFO - topK: 80:, map: 0.0820408153406517
+2024-12-13 00:54:07,232 - INFO - topK: 100:, map: 0.07029264492988008
+2024-12-13 00:54:07,359 - INFO - begin training stage: [41/350]
+2024-12-13 00:54:10,850 - INFO - Epoch:[41/350] Step:[28/28] reconstruction_loss: 0.36 contra_loss: 3.20 contra_loss_cluster: 4.28
+2024-12-13 00:54:11,151 - INFO - now the learning rate is: 0.00048359559988076336
+2024-12-13 00:54:11,462 - INFO - begin training stage: [42/350]
+2024-12-13 00:54:14,914 - INFO - Epoch:[42/350] Step:[28/28] reconstruction_loss: 0.36 contra_loss: 3.20 contra_loss_cluster: 4.23
+2024-12-13 00:54:15,216 - INFO - now the learning rate is: 0.0004827952390426211
+2024-12-13 00:54:15,516 - INFO - begin training stage: [43/350]
+2024-12-13 00:54:18,978 - INFO - Epoch:[43/350] Step:[28/28] reconstruction_loss: 0.35 contra_loss: 3.22 contra_loss_cluster: 4.25
+2024-12-13 00:54:19,250 - INFO - now the learning rate is: 0.0004819765252755069
+2024-12-13 00:54:19,600 - INFO - begin training stage: [44/350]
+2024-12-13 00:54:23,167 - INFO - Epoch:[44/350] Step:[28/28] reconstruction_loss: 0.35 contra_loss: 3.22 contra_loss_cluster: 4.24
+2024-12-13 00:54:23,496 - INFO - now the learning rate is: 0.00048113952454127186
+2024-12-13 00:54:23,835 - INFO - begin training stage: [45/350]
+2024-12-13 00:54:27,375 - INFO - Epoch:[45/350] Step:[28/28] reconstruction_loss: 0.37 contra_loss: 3.20 contra_loss_cluster: 4.24
+2024-12-13 00:54:27,686 - INFO - now the learning rate is: 0.00048028430427510493
+2024-12-13 00:54:28,054 - INFO - begin training stage: [46/350]
+2024-12-13 00:54:31,505 - INFO - Epoch:[46/350] Step:[28/28] reconstruction_loss: 0.36 contra_loss: 3.20 contra_loss_cluster: 4.22
+2024-12-13 00:54:31,786 - INFO - now the learning rate is: 0.0004794109333801003
+2024-12-13 00:54:32,163 - INFO - begin training stage: [47/350]
+2024-12-13 00:54:35,603 - INFO - Epoch:[47/350] Step:[28/28] reconstruction_loss: 0.36 contra_loss: 3.21 contra_loss_cluster: 4.23
+2024-12-13 00:54:35,895 - INFO - now the learning rate is: 0.0004785194822217058
+2024-12-13 00:54:36,195 - INFO - begin training stage: [48/350]
+2024-12-13 00:54:39,629 - INFO - Epoch:[48/350] Step:[28/28] reconstruction_loss: 0.34 contra_loss: 3.22 contra_loss_cluster: 4.21
+2024-12-13 00:54:39,938 - INFO - now the learning rate is: 0.0004776100226220537
+2024-12-13 00:54:40,251 - INFO - begin training stage: [49/350]
+2024-12-13 00:54:43,761 - INFO - Epoch:[49/350] Step:[28/28] reconstruction_loss: 0.36 contra_loss: 3.19 contra_loss_cluster: 4.20
+2024-12-13 00:54:44,038 - INFO - now the learning rate is: 0.0004766826278541742
+2024-12-13 00:54:44,348 - INFO - begin training stage: [50/350]
+2024-12-13 00:54:47,812 - INFO - Epoch:[50/350] Step:[28/28] reconstruction_loss: 0.35 contra_loss: 3.20 contra_loss_cluster: 4.17
+2024-12-13 00:54:48,140 - INFO - now the learning rate is: 0.0004757373726360921
+2024-12-13 00:54:48,468 - INFO - begin training stage: [51/350]
+2024-12-13 00:54:50,016 - INFO - Epoch:[51/350] Step:[10/28] reconstruction_loss: 0.34 contra_loss: 3.31 contra_loss_cluster: 4.19
+2024-12-13 00:54:51,375 - INFO - Epoch:[51/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.32 contra_loss_cluster: 4.16
+2024-12-13 00:54:52,761 - INFO - now the learning rate is: 0.0004747743331248068
+2024-12-13 00:54:53,130 - INFO - begin training stage: [52/350]
+2024-12-13 00:54:54,724 - INFO - Epoch:[52/350] Step:[10/28] reconstruction_loss: 0.36 contra_loss: 3.33 contra_loss_cluster: 4.18
+2024-12-13 00:54:56,136 - INFO - Epoch:[52/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.31 contra_loss_cluster: 4.16
+2024-12-13 00:54:57,572 - INFO - now the learning rate is: 0.0004737935869101564
+2024-12-13 00:54:57,890 - INFO - begin training stage: [53/350]
+2024-12-13 00:54:59,447 - INFO - Epoch:[53/350] Step:[10/28] reconstruction_loss: 0.35 contra_loss: 3.30 contra_loss_cluster: 4.13
+2024-12-13 00:55:00,836 - INFO - Epoch:[53/350] Step:[20/28] reconstruction_loss: 0.36 contra_loss: 3.32 contra_loss_cluster: 4.18
+2024-12-13 00:55:02,194 - INFO - now the learning rate is: 0.0004727952130085668
+2024-12-13 00:55:02,508 - INFO - begin training stage: [54/350]
+2024-12-13 00:55:04,068 - INFO - Epoch:[54/350] Step:[10/28] reconstruction_loss: 0.35 contra_loss: 3.33 contra_loss_cluster: 4.13
+2024-12-13 00:55:05,429 - INFO - Epoch:[54/350] Step:[20/28] reconstruction_loss: 0.36 contra_loss: 3.32 contra_loss_cluster: 4.15
+2024-12-13 00:55:06,824 - INFO - now the learning rate is: 0.0004717792918566854
+2024-12-13 00:55:07,136 - INFO - begin training stage: [55/350]
+2024-12-13 00:55:08,705 - INFO - Epoch:[55/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.31 contra_loss_cluster: 4.12
+2024-12-13 00:55:10,079 - INFO - Epoch:[55/350] Step:[20/28] reconstruction_loss: 0.35 contra_loss: 3.32 contra_loss_cluster: 4.15
+2024-12-13 00:55:11,471 - INFO - now the learning rate is: 0.0004707459053049003
+2024-12-13 00:55:11,784 - INFO - begin training stage: [56/350]
+2024-12-13 00:55:13,368 - INFO - Epoch:[56/350] Step:[10/28] reconstruction_loss: 0.35 contra_loss: 3.31 contra_loss_cluster: 4.15
+2024-12-13 00:55:14,722 - INFO - Epoch:[56/350] Step:[20/28] reconstruction_loss: 0.35 contra_loss: 3.30 contra_loss_cluster: 4.13
+2024-12-13 00:55:16,149 - INFO - now the learning rate is: 0.000469695136610746
+2024-12-13 00:55:16,461 - INFO - begin training stage: [57/350]
+2024-12-13 00:55:18,012 - INFO - Epoch:[57/350] Step:[10/28] reconstruction_loss: 0.34 contra_loss: 3.32 contra_loss_cluster: 4.14
+2024-12-13 00:55:19,366 - INFO - Epoch:[57/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.30 contra_loss_cluster: 4.12
+2024-12-13 00:55:20,726 - INFO - now the learning rate is: 0.0004686270704321957
+2024-12-13 00:55:21,035 - INFO - begin training stage: [58/350]
+2024-12-13 00:55:22,622 - INFO - Epoch:[58/350] Step:[10/28] reconstruction_loss: 0.34 contra_loss: 3.32 contra_loss_cluster: 4.12
+2024-12-13 00:55:23,985 - INFO - Epoch:[58/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.31 contra_loss_cluster: 4.13
+2024-12-13 00:55:25,356 - INFO - now the learning rate is: 0.0004675417928208402
+2024-12-13 00:55:25,667 - INFO - begin training stage: [59/350]
+2024-12-13 00:55:27,202 - INFO - Epoch:[59/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.32 contra_loss_cluster: 4.10
+2024-12-13 00:55:28,587 - INFO - Epoch:[59/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.31 contra_loss_cluster: 4.09
+2024-12-13 00:55:29,958 - INFO - now the learning rate is: 0.0004664393912149552
+2024-12-13 00:55:30,279 - INFO - begin training stage: [60/350]
+2024-12-13 00:55:31,827 - INFO - Epoch:[60/350] Step:[10/28] reconstruction_loss: 0.35 contra_loss: 3.31 contra_loss_cluster: 4.11
+2024-12-13 00:55:33,179 - INFO - Epoch:[60/350] Step:[20/28] reconstruction_loss: 0.35 contra_loss: 3.30 contra_loss_cluster: 4.11
+2024-12-13 00:55:34,573 - INFO - now the learning rate is: 0.00046531995443245663
+2024-12-13 00:55:34,892 - INFO - eval data number: 3570
+2024-12-13 00:55:36,921 - INFO - loading query data ......
+2024-12-13 00:55:38,032 - INFO - retrieval costs: 3.139249086380005
+2024-12-13 00:55:38,196 - INFO - hamming distance computation costs: 0.16387176513671875
+2024-12-13 00:55:38,322 - INFO - hamming ranking costs: 0.12613916397094727
+2024-12-13 00:55:38,322 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 00:55:38,520 - INFO - similarity labels generation costs: 0.19814467430114746
+2024-12-13 00:55:38,545 - INFO - topK: 5:, map: 0.23105882352941176
+2024-12-13 00:55:38,632 - INFO - topK: 20:, map: 0.16386094667511228
+2024-12-13 00:55:38,800 - INFO - topK: 40:, map: 0.126816148689326
+2024-12-13 00:55:39,050 - INFO - topK: 60:, map: 0.10293842480392751
+2024-12-13 00:55:39,387 - INFO - topK: 80:, map: 0.08586937926730148
+2024-12-13 00:55:39,809 - INFO - topK: 100:, map: 0.07369034473612908
+2024-12-13 00:55:39,936 - INFO - begin training stage: [61/350]
+2024-12-13 00:55:41,550 - INFO - Epoch:[61/350] Step:[10/28] reconstruction_loss: 0.34 contra_loss: 3.31 contra_loss_cluster: 4.10
+2024-12-13 00:55:42,923 - INFO - Epoch:[61/350] Step:[20/28] reconstruction_loss: 0.36 contra_loss: 3.32 contra_loss_cluster: 4.09
+2024-12-13 00:55:44,322 - INFO - now the learning rate is: 0.0004641835726637445
+2024-12-13 00:55:44,664 - INFO - begin training stage: [62/350]
+2024-12-13 00:55:46,214 - INFO - Epoch:[62/350] Step:[10/28] reconstruction_loss: 0.35 contra_loss: 3.32 contra_loss_cluster: 4.08
+2024-12-13 00:55:47,574 - INFO - Epoch:[62/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.31 contra_loss_cluster: 4.07
+2024-12-13 00:55:49,087 - INFO - now the learning rate is: 0.00046303033746443695
+2024-12-13 00:55:49,420 - INFO - begin training stage: [63/350]
+2024-12-13 00:55:50,980 - INFO - Epoch:[63/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.33 contra_loss_cluster: 4.07
+2024-12-13 00:55:52,321 - INFO - Epoch:[63/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.32 contra_loss_cluster: 4.06
+2024-12-13 00:55:53,732 - INFO - now the learning rate is: 0.0004618603417479932
+2024-12-13 00:55:54,062 - INFO - begin training stage: [64/350]
+2024-12-13 00:55:55,593 - INFO - Epoch:[64/350] Step:[10/28] reconstruction_loss: 0.34 contra_loss: 3.31 contra_loss_cluster: 4.07
+2024-12-13 00:55:56,941 - INFO - Epoch:[64/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.32 contra_loss_cluster: 4.07
+2024-12-13 00:55:58,306 - INFO - now the learning rate is: 0.00046067367977822843
+2024-12-13 00:55:58,614 - INFO - begin training stage: [65/350]
+2024-12-13 00:56:00,178 - INFO - Epoch:[65/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.31 contra_loss_cluster: 4.06
+2024-12-13 00:56:01,557 - INFO - Epoch:[65/350] Step:[20/28] reconstruction_loss: 0.35 contra_loss: 3.31 contra_loss_cluster: 4.08
+2024-12-13 00:56:03,046 - INFO - now the learning rate is: 0.00045947044716171864
+2024-12-13 00:56:03,386 - INFO - begin training stage: [66/350]
+2024-12-13 00:56:04,974 - INFO - Epoch:[66/350] Step:[10/28] reconstruction_loss: 0.34 contra_loss: 3.31 contra_loss_cluster: 4.05
+2024-12-13 00:56:06,362 - INFO - Epoch:[66/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.31 contra_loss_cluster: 4.06
+2024-12-13 00:56:07,754 - INFO - now the learning rate is: 0.0004582507408400982
+2024-12-13 00:56:08,064 - INFO - begin training stage: [67/350]
+2024-12-13 00:56:09,607 - INFO - Epoch:[67/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.31 contra_loss_cluster: 4.02
+2024-12-13 00:56:10,974 - INFO - Epoch:[67/350] Step:[20/28] reconstruction_loss: 0.35 contra_loss: 3.29 contra_loss_cluster: 4.04
+2024-12-13 00:56:12,337 - INFO - now the learning rate is: 0.00045701465908224906
+2024-12-13 00:56:12,644 - INFO - begin training stage: [68/350]
+2024-12-13 00:56:14,165 - INFO - Epoch:[68/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.31 contra_loss_cluster: 4.06
+2024-12-13 00:56:15,510 - INFO - Epoch:[68/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.31 contra_loss_cluster: 4.02
+2024-12-13 00:56:16,861 - INFO - now the learning rate is: 0.0004557623014763839
+2024-12-13 00:56:17,234 - INFO - begin training stage: [69/350]
+2024-12-13 00:56:18,835 - INFO - Epoch:[69/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.30 contra_loss_cluster: 4.01
+2024-12-13 00:56:20,221 - INFO - Epoch:[69/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.31 contra_loss_cluster: 4.02
+2024-12-13 00:56:21,632 - INFO - now the learning rate is: 0.00045449376892202234
+2024-12-13 00:56:21,944 - INFO - begin training stage: [70/350]
+2024-12-13 00:56:23,567 - INFO - Epoch:[70/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.32 contra_loss_cluster: 4.01
+2024-12-13 00:56:24,963 - INFO - Epoch:[70/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.32 contra_loss_cluster: 3.97
+2024-12-13 00:56:26,349 - INFO - now the learning rate is: 0.00045320916362186176
+2024-12-13 00:56:26,727 - INFO - begin training stage: [71/350]
+2024-12-13 00:56:28,268 - INFO - Epoch:[71/350] Step:[10/28] reconstruction_loss: 0.34 contra_loss: 3.30 contra_loss_cluster: 4.02
+2024-12-13 00:56:29,607 - INFO - Epoch:[71/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.31 contra_loss_cluster: 4.00
+2024-12-13 00:56:30,958 - INFO - now the learning rate is: 0.0004519085890735428
+2024-12-13 00:56:31,287 - INFO - begin training stage: [72/350]
+2024-12-13 00:56:32,862 - INFO - Epoch:[72/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.31 contra_loss_cluster: 3.96
+2024-12-13 00:56:34,251 - INFO - Epoch:[72/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.30 contra_loss_cluster: 3.98
+2024-12-13 00:56:35,661 - INFO - now the learning rate is: 0.00045059215006131145
+2024-12-13 00:56:35,986 - INFO - begin training stage: [73/350]
+2024-12-13 00:56:37,583 - INFO - Epoch:[73/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.30 contra_loss_cluster: 3.95
+2024-12-13 00:56:38,921 - INFO - Epoch:[73/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.31 contra_loss_cluster: 3.97
+2024-12-13 00:56:40,327 - INFO - now the learning rate is: 0.00044925995264757603
+2024-12-13 00:56:40,635 - INFO - begin training stage: [74/350]
+2024-12-13 00:56:42,186 - INFO - Epoch:[74/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.30 contra_loss_cluster: 3.97
+2024-12-13 00:56:43,538 - INFO - Epoch:[74/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.32 contra_loss_cluster: 3.97
+2024-12-13 00:56:44,923 - INFO - now the learning rate is: 0.00044791210416436254
+2024-12-13 00:56:45,227 - INFO - begin training stage: [75/350]
+2024-12-13 00:56:46,866 - INFO - Epoch:[75/350] Step:[10/28] reconstruction_loss: 0.34 contra_loss: 3.29 contra_loss_cluster: 3.98
+2024-12-13 00:56:48,256 - INFO - Epoch:[75/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.30 contra_loss_cluster: 3.99
+2024-12-13 00:56:49,670 - INFO - now the learning rate is: 0.0004465487132046669
+2024-12-13 00:56:49,997 - INFO - begin training stage: [76/350]
+2024-12-13 00:56:51,600 - INFO - Epoch:[76/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.96
+2024-12-13 00:56:52,959 - INFO - Epoch:[76/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.32 contra_loss_cluster: 3.98
+2024-12-13 00:56:54,319 - INFO - now the learning rate is: 0.0004451698896137061
+2024-12-13 00:56:54,637 - INFO - begin training stage: [77/350]
+2024-12-13 00:56:56,195 - INFO - Epoch:[77/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.32 contra_loss_cluster: 3.93
+2024-12-13 00:56:57,560 - INFO - Epoch:[77/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.29 contra_loss_cluster: 3.96
+2024-12-13 00:56:58,947 - INFO - now the learning rate is: 0.00044377574448006797
+2024-12-13 00:56:59,265 - INFO - begin training stage: [78/350]
+2024-12-13 00:57:01,360 - INFO - Epoch:[78/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.30 contra_loss_cluster: 3.97
+2024-12-13 00:57:02,770 - INFO - Epoch:[78/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.30 contra_loss_cluster: 3.95
+2024-12-13 00:57:04,186 - INFO - now the learning rate is: 0.0004423663901267612
+2024-12-13 00:57:04,496 - INFO - begin training stage: [79/350]
+2024-12-13 00:57:06,031 - INFO - Epoch:[79/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.96
+2024-12-13 00:57:07,383 - INFO - Epoch:[79/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.89
+2024-12-13 00:57:08,752 - INFO - now the learning rate is: 0.0004409419401021657
+2024-12-13 00:57:09,075 - INFO - begin training stage: [80/350]
+2024-12-13 00:57:10,657 - INFO - Epoch:[80/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.88
+2024-12-13 00:57:12,077 - INFO - Epoch:[80/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.31 contra_loss_cluster: 3.92
+2024-12-13 00:57:13,471 - INFO - now the learning rate is: 0.0004395025091708843
+2024-12-13 00:57:13,786 - INFO - eval data number: 3570
+2024-12-13 00:57:15,983 - INFO - loading query data ......
+2024-12-13 00:57:17,227 - INFO - retrieval costs: 3.4395363330841064
+2024-12-13 00:57:17,376 - INFO - hamming distance computation costs: 0.14928340911865234
+2024-12-13 00:57:17,485 - INFO - hamming ranking costs: 0.10952401161193848
+2024-12-13 00:57:17,486 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 00:57:17,690 - INFO - similarity labels generation costs: 0.20467877388000488
+2024-12-13 00:57:17,715 - INFO - topK: 5:, map: 0.24046405228758172
+2024-12-13 00:57:17,804 - INFO - topK: 20:, map: 0.1708902890775235
+2024-12-13 00:57:17,980 - INFO - topK: 40:, map: 0.13237768458792173
+2024-12-13 00:57:18,234 - INFO - topK: 60:, map: 0.10765204446291979
+2024-12-13 00:57:18,574 - INFO - topK: 80:, map: 0.0898864225852295
+2024-12-13 00:57:18,995 - INFO - topK: 100:, map: 0.0769528106338674
+2024-12-13 00:57:19,130 - INFO - begin training stage: [81/350]
+2024-12-13 00:57:20,707 - INFO - Epoch:[81/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.28 contra_loss_cluster: 3.87
+2024-12-13 00:57:22,035 - INFO - Epoch:[81/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.29 contra_loss_cluster: 3.92
+2024-12-13 00:57:23,400 - INFO - now the learning rate is: 0.00043804821330449626
+2024-12-13 00:57:23,713 - INFO - begin training stage: [82/350]
+2024-12-13 00:57:25,268 - INFO - Epoch:[82/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.29 contra_loss_cluster: 3.91
+2024-12-13 00:57:26,649 - INFO - Epoch:[82/350] Step:[20/28] reconstruction_loss: 0.34 contra_loss: 3.28 contra_loss_cluster: 3.91
+2024-12-13 00:57:28,027 - INFO - now the learning rate is: 0.00043657916967221403
+2024-12-13 00:57:28,357 - INFO - begin training stage: [83/350]
+2024-12-13 00:57:29,893 - INFO - Epoch:[83/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.31 contra_loss_cluster: 3.87
+2024-12-13 00:57:31,240 - INFO - Epoch:[83/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.90
+2024-12-13 00:57:32,605 - INFO - now the learning rate is: 0.0004350954966314429
+2024-12-13 00:57:32,916 - INFO - begin training stage: [84/350]
+2024-12-13 00:57:34,461 - INFO - Epoch:[84/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.86
+2024-12-13 00:57:35,794 - INFO - Epoch:[84/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.88
+2024-12-13 00:57:37,133 - INFO - now the learning rate is: 0.0004335973137182454
+2024-12-13 00:57:37,460 - INFO - begin training stage: [85/350]
+2024-12-13 00:57:38,998 - INFO - Epoch:[85/350] Step:[10/28] reconstruction_loss: 0.34 contra_loss: 3.30 contra_loss_cluster: 3.86
+2024-12-13 00:57:40,319 - INFO - Epoch:[85/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.86
+2024-12-13 00:57:41,703 - INFO - now the learning rate is: 0.0004320847416377105
+2024-12-13 00:57:42,003 - INFO - begin training stage: [86/350]
+2024-12-13 00:57:43,551 - INFO - Epoch:[86/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.86
+2024-12-13 00:57:44,903 - INFO - Epoch:[86/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.82
+2024-12-13 00:57:46,319 - INFO - now the learning rate is: 0.0004305579022542287
+2024-12-13 00:57:46,629 - INFO - begin training stage: [87/350]
+2024-12-13 00:57:48,214 - INFO - Epoch:[87/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.83
+2024-12-13 00:57:49,578 - INFO - Epoch:[87/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.83
+2024-12-13 00:57:50,945 - INFO - now the learning rate is: 0.00042901691858167356
+2024-12-13 00:57:51,303 - INFO - begin training stage: [88/350]
+2024-12-13 00:57:52,863 - INFO - Epoch:[88/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.82
+2024-12-13 00:57:54,202 - INFO - Epoch:[88/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.30 contra_loss_cluster: 3.84
+2024-12-13 00:57:55,545 - INFO - now the learning rate is: 0.00042746191477349113
+2024-12-13 00:57:55,860 - INFO - begin training stage: [89/350]
+2024-12-13 00:57:57,402 - INFO - Epoch:[89/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.82
+2024-12-13 00:57:58,729 - INFO - Epoch:[89/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.82
+2024-12-13 00:58:00,111 - INFO - now the learning rate is: 0.0004258930161126967
+2024-12-13 00:58:00,420 - INFO - begin training stage: [90/350]
+2024-12-13 00:58:01,983 - INFO - Epoch:[90/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.31 contra_loss_cluster: 3.87
+2024-12-13 00:58:03,330 - INFO - Epoch:[90/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.31 contra_loss_cluster: 3.82
+2024-12-13 00:58:04,737 - INFO - now the learning rate is: 0.0004243103490017815
+2024-12-13 00:58:05,097 - INFO - begin training stage: [91/350]
+2024-12-13 00:58:06,650 - INFO - Epoch:[91/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.31 contra_loss_cluster: 3.83
+2024-12-13 00:58:08,016 - INFO - Epoch:[91/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.77
+2024-12-13 00:58:09,403 - INFO - now the learning rate is: 0.00042271404095252835
+2024-12-13 00:58:09,714 - INFO - begin training stage: [92/350]
+2024-12-13 00:58:11,255 - INFO - Epoch:[92/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.79
+2024-12-13 00:58:12,628 - INFO - Epoch:[92/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.32 contra_loss_cluster: 3.81
+2024-12-13 00:58:14,012 - INFO - now the learning rate is: 0.00042110422057573877
+2024-12-13 00:58:14,323 - INFO - begin training stage: [93/350]
+2024-12-13 00:58:15,920 - INFO - Epoch:[93/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.76
+2024-12-13 00:58:17,317 - INFO - Epoch:[93/350] Step:[20/28] reconstruction_loss: 0.33 contra_loss: 3.29 contra_loss_cluster: 3.74
+2024-12-13 00:58:18,686 - INFO - now the learning rate is: 0.0004194810175708707
+2024-12-13 00:58:18,999 - INFO - begin training stage: [94/350]
+2024-12-13 00:58:20,527 - INFO - Epoch:[94/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.31 contra_loss_cluster: 3.78
+2024-12-13 00:58:21,866 - INFO - Epoch:[94/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.79
+2024-12-13 00:58:23,219 - INFO - now the learning rate is: 0.000417844562715589
+2024-12-13 00:58:23,520 - INFO - begin training stage: [95/350]
+2024-12-13 00:58:25,085 - INFO - Epoch:[95/350] Step:[10/28] reconstruction_loss: 0.33 contra_loss: 3.29 contra_loss_cluster: 3.79
+2024-12-13 00:58:26,523 - INFO - Epoch:[95/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.79
+2024-12-13 00:58:27,971 - INFO - now the learning rate is: 0.00041619498785522925
+2024-12-13 00:58:28,284 - INFO - begin training stage: [96/350]
+2024-12-13 00:58:29,848 - INFO - Epoch:[96/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.31 contra_loss_cluster: 3.79
+2024-12-13 00:58:31,203 - INFO - Epoch:[96/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.76
+2024-12-13 00:58:32,549 - INFO - now the learning rate is: 0.0004145324258921752
+2024-12-13 00:58:32,869 - INFO - begin training stage: [97/350]
+2024-12-13 00:58:34,414 - INFO - Epoch:[97/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.78
+2024-12-13 00:58:35,775 - INFO - Epoch:[97/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.31 contra_loss_cluster: 3.68
+2024-12-13 00:58:37,158 - INFO - now the learning rate is: 0.0004128570107751508
+2024-12-13 00:58:37,465 - INFO - begin training stage: [98/350]
+2024-12-13 00:58:39,028 - INFO - Epoch:[98/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.30 contra_loss_cluster: 3.72
+2024-12-13 00:58:40,396 - INFO - Epoch:[98/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.72
+2024-12-13 00:58:41,770 - INFO - now the learning rate is: 0.0004111688774884287
+2024-12-13 00:58:42,076 - INFO - begin training stage: [99/350]
+2024-12-13 00:58:43,614 - INFO - Epoch:[99/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.72
+2024-12-13 00:58:44,964 - INFO - Epoch:[99/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.70
+2024-12-13 00:58:46,333 - INFO - now the learning rate is: 0.00040946816204095456
+2024-12-13 00:58:46,636 - INFO - begin training stage: [100/350]
+2024-12-13 00:58:48,247 - INFO - Epoch:[100/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.69
+2024-12-13 00:58:49,675 - INFO - Epoch:[100/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.68
+2024-12-13 00:58:51,117 - INFO - now the learning rate is: 0.00040775500145538945
+2024-12-13 00:58:51,413 - INFO - eval data number: 3570
+2024-12-13 00:58:53,510 - INFO - loading query data ......
+2024-12-13 00:58:54,691 - INFO - retrieval costs: 3.2776734828948975
+2024-12-13 00:58:54,816 - INFO - hamming distance computation costs: 0.12484312057495117
+2024-12-13 00:58:54,928 - INFO - hamming ranking costs: 0.11250495910644531
+2024-12-13 00:58:54,929 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 00:58:55,133 - INFO - similarity labels generation costs: 0.2041938304901123
+2024-12-13 00:58:55,159 - INFO - topK: 5:, map: 0.24805228758169934
+2024-12-13 00:58:55,250 - INFO - topK: 20:, map: 0.18030555634127007
+2024-12-13 00:58:55,419 - INFO - topK: 40:, map: 0.1402669353505098
+2024-12-13 00:58:55,670 - INFO - topK: 60:, map: 0.11255528542256288
+2024-12-13 00:58:56,004 - INFO - topK: 80:, map: 0.09328965341967625
+2024-12-13 00:58:56,412 - INFO - topK: 100:, map: 0.07935010562760877
+2024-12-13 00:58:56,538 - INFO - begin training stage: [101/350]
+2024-12-13 00:58:58,109 - INFO - Epoch:[101/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.74
+2024-12-13 00:58:59,456 - INFO - Epoch:[101/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.69
+2024-12-13 00:59:00,825 - INFO - now the learning rate is: 0.00040602953375706987
+2024-12-13 00:59:01,136 - INFO - begin training stage: [102/350]
+2024-12-13 00:59:02,718 - INFO - Epoch:[102/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.71
+2024-12-13 00:59:04,075 - INFO - Epoch:[102/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.67
+2024-12-13 00:59:05,499 - INFO - now the learning rate is: 0.0004042918979628878
+2024-12-13 00:59:05,808 - INFO - begin training stage: [103/350]
+2024-12-13 00:59:07,369 - INFO - Epoch:[103/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.64
+2024-12-13 00:59:08,849 - INFO - Epoch:[103/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.63
+2024-12-13 00:59:10,328 - INFO - now the learning rate is: 0.00040254223407008995
+2024-12-13 00:59:10,688 - INFO - begin training stage: [104/350]
+2024-12-13 00:59:12,298 - INFO - Epoch:[104/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.30 contra_loss_cluster: 3.68
+2024-12-13 00:59:13,699 - INFO - Epoch:[104/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.63
+2024-12-13 00:59:15,120 - INFO - now the learning rate is: 0.0004007806830449989
+2024-12-13 00:59:15,432 - INFO - begin training stage: [105/350]
+2024-12-13 00:59:17,048 - INFO - Epoch:[105/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.30 contra_loss_cluster: 3.69
+2024-12-13 00:59:18,461 - INFO - Epoch:[105/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.31 contra_loss_cluster: 3.67
+2024-12-13 00:59:19,864 - INFO - now the learning rate is: 0.00039900738681165573
+2024-12-13 00:59:20,171 - INFO - begin training stage: [106/350]
+2024-12-13 00:59:21,765 - INFO - Epoch:[106/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.60
+2024-12-13 00:59:23,164 - INFO - Epoch:[106/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.27 contra_loss_cluster: 3.64
+2024-12-13 00:59:24,585 - INFO - now the learning rate is: 0.00039722248824038527
+2024-12-13 00:59:24,907 - INFO - begin training stage: [107/350]
+2024-12-13 00:59:26,495 - INFO - Epoch:[107/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.30 contra_loss_cluster: 3.63
+2024-12-13 00:59:27,900 - INFO - Epoch:[107/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.68
+2024-12-13 00:59:29,294 - INFO - now the learning rate is: 0.00039542613113628574
+2024-12-13 00:59:29,604 - INFO - begin training stage: [108/350]
+2024-12-13 00:59:31,165 - INFO - Epoch:[108/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.28 contra_loss_cluster: 3.61
+2024-12-13 00:59:32,513 - INFO - Epoch:[108/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.27 contra_loss_cluster: 3.62
+2024-12-13 00:59:33,885 - INFO - now the learning rate is: 0.00039361846022764233
+2024-12-13 00:59:34,195 - INFO - begin training stage: [109/350]
+2024-12-13 00:59:35,752 - INFO - Epoch:[109/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.30 contra_loss_cluster: 3.61
+2024-12-13 00:59:37,090 - INFO - Epoch:[109/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.30 contra_loss_cluster: 3.63
+2024-12-13 00:59:38,429 - INFO - now the learning rate is: 0.0003917996211542671
+2024-12-13 00:59:38,761 - INFO - begin training stage: [110/350]
+2024-12-13 00:59:40,282 - INFO - Epoch:[110/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.66
+2024-12-13 00:59:41,624 - INFO - Epoch:[110/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.61
+2024-12-13 00:59:42,978 - INFO - now the learning rate is: 0.0003899697604557649
+2024-12-13 00:59:43,292 - INFO - begin training stage: [111/350]
+2024-12-13 00:59:44,835 - INFO - Epoch:[111/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.66
+2024-12-13 00:59:46,199 - INFO - Epoch:[111/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.63
+2024-12-13 00:59:47,565 - INFO - now the learning rate is: 0.0003881290255597272
+2024-12-13 00:59:47,879 - INFO - begin training stage: [112/350]
+2024-12-13 00:59:49,418 - INFO - Epoch:[112/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.30 contra_loss_cluster: 3.62
+2024-12-13 00:59:50,776 - INFO - Epoch:[112/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.30 contra_loss_cluster: 3.64
+2024-12-13 00:59:52,156 - INFO - now the learning rate is: 0.000386277564769854
+2024-12-13 00:59:52,467 - INFO - begin training stage: [113/350]
+2024-12-13 00:59:54,016 - INFO - Epoch:[113/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.60
+2024-12-13 00:59:55,388 - INFO - Epoch:[113/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.61
+2024-12-13 00:59:56,754 - INFO - now the learning rate is: 0.0003844155272540056
+2024-12-13 00:59:57,065 - INFO - begin training stage: [114/350]
+2024-12-13 00:59:58,623 - INFO - Epoch:[114/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.28 contra_loss_cluster: 3.61
+2024-12-13 00:59:59,981 - INFO - Epoch:[114/350] Step:[20/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.59
+2024-12-13 01:00:01,368 - INFO - now the learning rate is: 0.00038254306303218396
+2024-12-13 01:00:01,675 - INFO - begin training stage: [115/350]
+2024-12-13 01:00:03,203 - INFO - Epoch:[115/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.59
+2024-12-13 01:00:04,556 - INFO - Epoch:[115/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.28 contra_loss_cluster: 3.55
+2024-12-13 01:00:05,939 - INFO - now the learning rate is: 0.00038066032296444686
+2024-12-13 01:00:06,254 - INFO - begin training stage: [116/350]
+2024-12-13 01:00:07,863 - INFO - Epoch:[116/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.28 contra_loss_cluster: 3.62
+2024-12-13 01:00:09,259 - INFO - Epoch:[116/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.30 contra_loss_cluster: 3.53
+2024-12-13 01:00:10,679 - INFO - now the learning rate is: 0.00037876745873875257
+2024-12-13 01:00:10,991 - INFO - begin training stage: [117/350]
+2024-12-13 01:00:12,603 - INFO - Epoch:[117/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.54
+2024-12-13 01:00:14,001 - INFO - Epoch:[117/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.28 contra_loss_cluster: 3.51
+2024-12-13 01:00:15,425 - INFO - now the learning rate is: 0.0003768646228587392
+2024-12-13 01:00:15,740 - INFO - begin training stage: [118/350]
+2024-12-13 01:00:17,366 - INFO - Epoch:[118/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.57
+2024-12-13 01:00:18,759 - INFO - Epoch:[118/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.30 contra_loss_cluster: 3.51
+2024-12-13 01:00:20,176 - INFO - now the learning rate is: 0.0003749519686314377
+2024-12-13 01:00:20,487 - INFO - begin training stage: [119/350]
+2024-12-13 01:00:22,057 - INFO - Epoch:[119/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.47
+2024-12-13 01:00:23,416 - INFO - Epoch:[119/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.56
+2024-12-13 01:00:24,811 - INFO - now the learning rate is: 0.00037302965015492006
+2024-12-13 01:00:25,120 - INFO - begin training stage: [120/350]
+2024-12-13 01:00:26,671 - INFO - Epoch:[120/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.56
+2024-12-13 01:00:28,019 - INFO - Epoch:[120/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.56
+2024-12-13 01:00:29,389 - INFO - now the learning rate is: 0.0003710978223058845
+2024-12-13 01:00:29,706 - INFO - eval data number: 3570
+2024-12-13 01:00:31,765 - INFO - loading query data ......
+2024-12-13 01:00:32,987 - INFO - retrieval costs: 3.280325412750244
+2024-12-13 01:00:33,129 - INFO - hamming distance computation costs: 0.142136812210083
+2024-12-13 01:00:33,242 - INFO - hamming ranking costs: 0.11328744888305664
+2024-12-13 01:00:33,242 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:00:33,443 - INFO - similarity labels generation costs: 0.20076537132263184
+2024-12-13 01:00:33,468 - INFO - topK: 5:, map: 0.2519193899782135
+2024-12-13 01:00:33,557 - INFO - topK: 20:, map: 0.18627270368739365
+2024-12-13 01:00:33,726 - INFO - topK: 40:, map: 0.1456930974236912
+2024-12-13 01:00:33,978 - INFO - topK: 60:, map: 0.11891859964771086
+2024-12-13 01:00:34,311 - INFO - topK: 80:, map: 0.09858453635077112
+2024-12-13 01:00:34,724 - INFO - topK: 100:, map: 0.08400412629628058
+2024-12-13 01:00:34,859 - INFO - begin training stage: [121/350]
+2024-12-13 01:00:36,432 - INFO - Epoch:[121/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.29 contra_loss_cluster: 3.57
+2024-12-13 01:00:37,780 - INFO - Epoch:[121/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.53
+2024-12-13 01:00:39,135 - INFO - now the learning rate is: 0.00036915664072717687
+2024-12-13 01:00:39,444 - INFO - begin training stage: [122/350]
+2024-12-13 01:00:40,976 - INFO - Epoch:[122/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.51
+2024-12-13 01:00:42,322 - INFO - Epoch:[122/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.30 contra_loss_cluster: 3.44
+2024-12-13 01:00:43,695 - INFO - now the learning rate is: 0.00036720626181525136
+2024-12-13 01:00:44,007 - INFO - begin training stage: [123/350]
+2024-12-13 01:00:45,549 - INFO - Epoch:[123/350] Step:[10/28] reconstruction_loss: 0.32 contra_loss: 3.28 contra_loss_cluster: 3.51
+2024-12-13 01:00:46,897 - INFO - Epoch:[123/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.49
+2024-12-13 01:00:48,253 - INFO - now the learning rate is: 0.0003652468427075695
+2024-12-13 01:00:48,576 - INFO - begin training stage: [124/350]
+2024-12-13 01:00:50,114 - INFO - Epoch:[124/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.48
+2024-12-13 01:00:51,461 - INFO - Epoch:[124/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.45
+2024-12-13 01:00:52,837 - INFO - now the learning rate is: 0.0003632785412699404
+2024-12-13 01:00:53,152 - INFO - begin training stage: [125/350]
+2024-12-13 01:00:54,679 - INFO - Epoch:[125/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.42
+2024-12-13 01:00:56,029 - INFO - Epoch:[125/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.48
+2024-12-13 01:00:57,377 - INFO - now the learning rate is: 0.0003613015160838015
+2024-12-13 01:00:57,696 - INFO - begin training stage: [126/350]
+2024-12-13 01:00:59,256 - INFO - Epoch:[126/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.30 contra_loss_cluster: 3.44
+2024-12-13 01:01:00,609 - INFO - Epoch:[126/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.44
+2024-12-13 01:01:01,997 - INFO - now the learning rate is: 0.00035931592643344257
+2024-12-13 01:01:02,311 - INFO - begin training stage: [127/350]
+2024-12-13 01:01:03,893 - INFO - Epoch:[127/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.51
+2024-12-13 01:01:05,253 - INFO - Epoch:[127/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.30 contra_loss_cluster: 3.39
+2024-12-13 01:01:06,620 - INFO - now the learning rate is: 0.0003573219322931719
+2024-12-13 01:01:06,942 - INFO - begin training stage: [128/350]
+2024-12-13 01:01:08,518 - INFO - Epoch:[128/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.28 contra_loss_cluster: 3.51
+2024-12-13 01:01:09,897 - INFO - Epoch:[128/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.44
+2024-12-13 01:01:11,340 - INFO - now the learning rate is: 0.000355319694314428
+2024-12-13 01:01:11,700 - INFO - begin training stage: [129/350]
+2024-12-13 01:01:13,251 - INFO - Epoch:[129/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.42
+2024-12-13 01:01:14,605 - INFO - Epoch:[129/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.47
+2024-12-13 01:01:15,955 - INFO - now the learning rate is: 0.000353309373812836
+2024-12-13 01:01:16,266 - INFO - begin training stage: [130/350]
+2024-12-13 01:01:17,795 - INFO - Epoch:[130/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.42
+2024-12-13 01:01:19,152 - INFO - Epoch:[130/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.27 contra_loss_cluster: 3.42
+2024-12-13 01:01:20,527 - INFO - now the learning rate is: 0.0003512911327552111
+2024-12-13 01:01:20,835 - INFO - begin training stage: [131/350]
+2024-12-13 01:01:22,462 - INFO - Epoch:[131/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.40
+2024-12-13 01:01:23,954 - INFO - Epoch:[131/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.43
+2024-12-13 01:01:25,453 - INFO - now the learning rate is: 0.00034926513374650917
+2024-12-13 01:01:25,818 - INFO - begin training stage: [132/350]
+2024-12-13 01:01:27,443 - INFO - Epoch:[132/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.36
+2024-12-13 01:01:28,880 - INFO - Epoch:[132/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.28 contra_loss_cluster: 3.41
+2024-12-13 01:01:30,263 - INFO - now the learning rate is: 0.00034723154001672587
+2024-12-13 01:01:30,572 - INFO - begin training stage: [133/350]
+2024-12-13 01:01:32,130 - INFO - Epoch:[133/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.37
+2024-12-13 01:01:33,492 - INFO - Epoch:[133/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.36
+2024-12-13 01:01:34,854 - INFO - now the learning rate is: 0.000345190515407746
+2024-12-13 01:01:35,193 - INFO - begin training stage: [134/350]
+2024-12-13 01:01:36,817 - INFO - Epoch:[134/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.43
+2024-12-13 01:01:38,240 - INFO - Epoch:[134/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.38
+2024-12-13 01:01:39,676 - INFO - now the learning rate is: 0.0003431422243601426
+2024-12-13 01:01:40,005 - INFO - begin training stage: [135/350]
+2024-12-13 01:01:41,614 - INFO - Epoch:[135/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.44
+2024-12-13 01:01:43,032 - INFO - Epoch:[135/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.30 contra_loss_cluster: 3.39
+2024-12-13 01:01:44,435 - INFO - now the learning rate is: 0.0003410868318999288
+2024-12-13 01:01:44,756 - INFO - begin training stage: [136/350]
+2024-12-13 01:01:46,370 - INFO - Epoch:[136/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.39
+2024-12-13 01:01:47,787 - INFO - Epoch:[136/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.40
+2024-12-13 01:01:49,177 - INFO - now the learning rate is: 0.00033902450362526204
+2024-12-13 01:01:49,496 - INFO - begin training stage: [137/350]
+2024-12-13 01:01:51,136 - INFO - Epoch:[137/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.38
+2024-12-13 01:01:52,552 - INFO - Epoch:[137/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.36
+2024-12-13 01:01:53,916 - INFO - now the learning rate is: 0.00033695540569310194
+2024-12-13 01:01:54,226 - INFO - begin training stage: [138/350]
+2024-12-13 01:01:55,771 - INFO - Epoch:[138/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.36
+2024-12-13 01:01:57,130 - INFO - Epoch:[138/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.39
+2024-12-13 01:01:58,526 - INFO - now the learning rate is: 0.00033487970480582357
+2024-12-13 01:01:58,842 - INFO - begin training stage: [139/350]
+2024-12-13 01:02:00,410 - INFO - Epoch:[139/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.39
+2024-12-13 01:02:01,786 - INFO - Epoch:[139/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.30 contra_loss_cluster: 3.36
+2024-12-13 01:02:03,209 - INFO - now the learning rate is: 0.0003327975681977867
+2024-12-13 01:02:03,564 - INFO - begin training stage: [140/350]
+2024-12-13 01:02:05,130 - INFO - Epoch:[140/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.33
+2024-12-13 01:02:06,515 - INFO - Epoch:[140/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.31
+2024-12-13 01:02:07,872 - INFO - now the learning rate is: 0.00033070916362186193
+2024-12-13 01:02:08,197 - INFO - eval data number: 3570
+2024-12-13 01:02:10,191 - INFO - loading query data ......
+2024-12-13 01:02:11,342 - INFO - retrieval costs: 3.1445794105529785
+2024-12-13 01:02:11,473 - INFO - hamming distance computation costs: 0.13125920295715332
+2024-12-13 01:02:11,583 - INFO - hamming ranking costs: 0.11011075973510742
+2024-12-13 01:02:11,584 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:02:11,789 - INFO - similarity labels generation costs: 0.20592355728149414
+2024-12-13 01:02:11,814 - INFO - topK: 5:, map: 0.24961220043572982
+2024-12-13 01:02:11,902 - INFO - topK: 20:, map: 0.17742854413450235
+2024-12-13 01:02:12,073 - INFO - topK: 40:, map: 0.1413466333913351
+2024-12-13 01:02:12,326 - INFO - topK: 60:, map: 0.11562263430252677
+2024-12-13 01:02:12,659 - INFO - topK: 80:, map: 0.09599193604003435
+2024-12-13 01:02:13,075 - INFO - topK: 100:, map: 0.08191641025951812
+2024-12-13 01:02:13,084 - INFO - begin training stage: [141/350]
+2024-12-13 01:02:14,658 - INFO - Epoch:[141/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.28 contra_loss_cluster: 3.37
+2024-12-13 01:02:16,019 - INFO - Epoch:[141/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.31
+2024-12-13 01:02:17,357 - INFO - now the learning rate is: 0.0003286146593359156
+2024-12-13 01:02:17,668 - INFO - begin training stage: [142/350]
+2024-12-13 01:02:19,184 - INFO - Epoch:[142/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.30
+2024-12-13 01:02:20,519 - INFO - Epoch:[142/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 3.25
+2024-12-13 01:02:21,869 - INFO - now the learning rate is: 0.000326514224089253
+2024-12-13 01:02:22,189 - INFO - begin training stage: [143/350]
+2024-12-13 01:02:23,721 - INFO - Epoch:[143/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 3.27
+2024-12-13 01:02:25,046 - INFO - Epoch:[143/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.30
+2024-12-13 01:02:26,418 - INFO - now the learning rate is: 0.00032440802710902346
+2024-12-13 01:02:26,730 - INFO - begin training stage: [144/350]
+2024-12-13 01:02:28,264 - INFO - Epoch:[144/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.29
+2024-12-13 01:02:29,614 - INFO - Epoch:[144/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.26
+2024-12-13 01:02:30,986 - INFO - now the learning rate is: 0.00032229623808658546
+2024-12-13 01:02:31,296 - INFO - begin training stage: [145/350]
+2024-12-13 01:02:32,809 - INFO - Epoch:[145/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 3.28
+2024-12-13 01:02:34,161 - INFO - Epoch:[145/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.23
+2024-12-13 01:02:35,503 - INFO - now the learning rate is: 0.0003201790271638352
+2024-12-13 01:02:35,834 - INFO - begin training stage: [146/350]
+2024-12-13 01:02:37,383 - INFO - Epoch:[146/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 3.24
+2024-12-13 01:02:38,731 - INFO - Epoch:[146/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.34
+2024-12-13 01:02:40,098 - INFO - now the learning rate is: 0.0003180565649194989
+2024-12-13 01:02:40,441 - INFO - begin training stage: [147/350]
+2024-12-13 01:02:41,967 - INFO - Epoch:[147/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.22
+2024-12-13 01:02:43,324 - INFO - Epoch:[147/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.29 contra_loss_cluster: 3.32
+2024-12-13 01:02:44,661 - INFO - now the learning rate is: 0.00031592902235538924
+2024-12-13 01:02:45,004 - INFO - begin training stage: [148/350]
+2024-12-13 01:02:46,611 - INFO - Epoch:[148/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.28
+2024-12-13 01:02:48,036 - INFO - Epoch:[148/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.25
+2024-12-13 01:02:49,467 - INFO - now the learning rate is: 0.0003137965708826285
+2024-12-13 01:02:49,787 - INFO - begin training stage: [149/350]
+2024-12-13 01:02:51,346 - INFO - Epoch:[149/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.30 contra_loss_cluster: 3.30
+2024-12-13 01:02:52,725 - INFO - Epoch:[149/350] Step:[20/28] reconstruction_loss: 0.31 contra_loss: 3.28 contra_loss_cluster: 3.28
+2024-12-13 01:02:54,119 - INFO - now the learning rate is: 0.00031165938230783816
+2024-12-13 01:02:54,433 - INFO - begin training stage: [150/350]
+2024-12-13 01:02:55,974 - INFO - Epoch:[150/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.28 contra_loss_cluster: 3.31
+2024-12-13 01:02:57,327 - INFO - Epoch:[150/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.24
+2024-12-13 01:02:58,685 - INFO - now the learning rate is: 0.00030951762881929686
+2024-12-13 01:02:59,011 - INFO - begin training stage: [151/350]
+2024-12-13 01:03:00,576 - INFO - Epoch:[151/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.27 contra_loss_cluster: 3.22
+2024-12-13 01:03:01,942 - INFO - Epoch:[151/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.22
+2024-12-13 01:03:03,298 - INFO - now the learning rate is: 0.0003073714829730679
+2024-12-13 01:03:03,623 - INFO - begin training stage: [152/350]
+2024-12-13 01:03:05,209 - INFO - Epoch:[152/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.30
+2024-12-13 01:03:06,590 - INFO - Epoch:[152/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.21
+2024-12-13 01:03:07,949 - INFO - now the learning rate is: 0.00030522111767909634
+2024-12-13 01:03:08,275 - INFO - begin training stage: [153/350]
+2024-12-13 01:03:09,855 - INFO - Epoch:[153/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.23
+2024-12-13 01:03:11,213 - INFO - Epoch:[153/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.19
+2024-12-13 01:03:12,593 - INFO - now the learning rate is: 0.00030306670618727814
+2024-12-13 01:03:12,903 - INFO - begin training stage: [154/350]
+2024-12-13 01:03:14,453 - INFO - Epoch:[154/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.23
+2024-12-13 01:03:15,799 - INFO - Epoch:[154/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.28
+2024-12-13 01:03:17,145 - INFO - now the learning rate is: 0.0003009084220735024
+2024-12-13 01:03:17,456 - INFO - begin training stage: [155/350]
+2024-12-13 01:03:19,021 - INFO - Epoch:[155/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.20
+2024-12-13 01:03:20,420 - INFO - Epoch:[155/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.22
+2024-12-13 01:03:21,828 - INFO - now the learning rate is: 0.00029874643922566584
+2024-12-13 01:03:22,184 - INFO - begin training stage: [156/350]
+2024-12-13 01:03:23,726 - INFO - Epoch:[156/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.11
+2024-12-13 01:03:25,078 - INFO - Epoch:[156/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 3.20
+2024-12-13 01:03:26,442 - INFO - now the learning rate is: 0.00029658093182966373
+2024-12-13 01:03:26,764 - INFO - begin training stage: [157/350]
+2024-12-13 01:03:28,319 - INFO - Epoch:[157/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 3.13
+2024-12-13 01:03:29,673 - INFO - Epoch:[157/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.21
+2024-12-13 01:03:31,082 - INFO - now the learning rate is: 0.00029441207435535605
+2024-12-13 01:03:31,435 - INFO - begin training stage: [158/350]
+2024-12-13 01:03:33,036 - INFO - Epoch:[158/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.18
+2024-12-13 01:03:34,405 - INFO - Epoch:[158/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 3.14
+2024-12-13 01:03:35,808 - INFO - now the learning rate is: 0.0002922400415425103
+2024-12-13 01:03:36,123 - INFO - begin training stage: [159/350]
+2024-12-13 01:03:37,715 - INFO - Epoch:[159/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.27 contra_loss_cluster: 3.21
+2024-12-13 01:03:39,104 - INFO - Epoch:[159/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.24
+2024-12-13 01:03:40,479 - INFO - now the learning rate is: 0.0002900650083867242
+2024-12-13 01:03:40,819 - INFO - begin training stage: [160/350]
+2024-12-13 01:03:42,388 - INFO - Epoch:[160/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.12
+2024-12-13 01:03:43,735 - INFO - Epoch:[160/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.19
+2024-12-13 01:03:45,112 - INFO - now the learning rate is: 0.0002878871501253255
+2024-12-13 01:03:45,429 - INFO - eval data number: 3570
+2024-12-13 01:03:47,439 - INFO - loading query data ......
+2024-12-13 01:03:48,613 - INFO - retrieval costs: 3.1824326515197754
+2024-12-13 01:03:48,749 - INFO - hamming distance computation costs: 0.13670635223388672
+2024-12-13 01:03:48,856 - INFO - hamming ranking costs: 0.10614204406738281
+2024-12-13 01:03:48,856 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:03:49,062 - INFO - similarity labels generation costs: 0.20684146881103516
+2024-12-13 01:03:49,087 - INFO - topK: 5:, map: 0.25479738562091503
+2024-12-13 01:03:49,175 - INFO - topK: 20:, map: 0.18761257715306767
+2024-12-13 01:03:49,346 - INFO - topK: 40:, map: 0.14655908010586138
+2024-12-13 01:03:49,599 - INFO - topK: 60:, map: 0.11977252056365963
+2024-12-13 01:03:49,934 - INFO - topK: 80:, map: 0.0991158931954039
+2024-12-13 01:03:50,352 - INFO - topK: 100:, map: 0.08456351449932979
+2024-12-13 01:03:50,484 - INFO - begin training stage: [161/350]
+2024-12-13 01:03:52,073 - INFO - Epoch:[161/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.12
+2024-12-13 01:03:53,418 - INFO - Epoch:[161/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.14
+2024-12-13 01:03:54,764 - INFO - now the learning rate is: 0.00028570664222325444
+2024-12-13 01:03:55,116 - INFO - begin training stage: [162/350]
+2024-12-13 01:03:56,677 - INFO - Epoch:[162/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.27 contra_loss_cluster: 3.12
+2024-12-13 01:03:58,004 - INFO - Epoch:[162/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.16
+2024-12-13 01:03:59,345 - INFO - now the learning rate is: 0.00028352366035892655
+2024-12-13 01:03:59,663 - INFO - begin training stage: [163/350]
+2024-12-13 01:04:01,175 - INFO - Epoch:[163/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.09
+2024-12-13 01:04:02,515 - INFO - Epoch:[163/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.27 contra_loss_cluster: 3.22
+2024-12-13 01:04:03,863 - INFO - now the learning rate is: 0.00028133838041007856
+2024-12-13 01:04:04,200 - INFO - begin training stage: [164/350]
+2024-12-13 01:04:05,809 - INFO - Epoch:[164/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.14
+2024-12-13 01:04:07,202 - INFO - Epoch:[164/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 3.13
+2024-12-13 01:04:08,619 - INFO - now the learning rate is: 0.0002791509784395986
+2024-12-13 01:04:08,952 - INFO - begin training stage: [165/350]
+2024-12-13 01:04:10,550 - INFO - Epoch:[165/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.08
+2024-12-13 01:04:11,946 - INFO - Epoch:[165/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 3.13
+2024-12-13 01:04:13,339 - INFO - now the learning rate is: 0.0002769616306813412
+2024-12-13 01:04:13,688 - INFO - begin training stage: [166/350]
+2024-12-13 01:04:15,308 - INFO - Epoch:[166/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.06
+2024-12-13 01:04:16,704 - INFO - Epoch:[166/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.13
+2024-12-13 01:04:18,097 - INFO - now the learning rate is: 0.00027477051352592813
+2024-12-13 01:04:18,424 - INFO - begin training stage: [167/350]
+2024-12-13 01:04:20,008 - INFO - Epoch:[167/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.13
+2024-12-13 01:04:21,399 - INFO - Epoch:[167/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.17
+2024-12-13 01:04:22,792 - INFO - now the learning rate is: 0.0002725778035065378
+2024-12-13 01:04:23,128 - INFO - begin training stage: [168/350]
+2024-12-13 01:04:24,720 - INFO - Epoch:[168/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.09
+2024-12-13 01:04:26,118 - INFO - Epoch:[168/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.08
+2024-12-13 01:04:27,553 - INFO - now the learning rate is: 0.00027038367728468164
+2024-12-13 01:04:27,880 - INFO - begin training stage: [169/350]
+2024-12-13 01:04:29,487 - INFO - Epoch:[169/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.12
+2024-12-13 01:04:30,892 - INFO - Epoch:[169/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.09
+2024-12-13 01:04:32,322 - INFO - now the learning rate is: 0.00026818831163597136
+2024-12-13 01:04:32,644 - INFO - begin training stage: [170/350]
+2024-12-13 01:04:34,236 - INFO - Epoch:[170/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.27 contra_loss_cluster: 3.05
+2024-12-13 01:04:35,639 - INFO - Epoch:[170/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 3.04
+2024-12-13 01:04:37,026 - INFO - now the learning rate is: 0.0002659918834358761
+2024-12-13 01:04:37,351 - INFO - begin training stage: [171/350]
+2024-12-13 01:04:38,940 - INFO - Epoch:[171/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 3.09
+2024-12-13 01:04:40,313 - INFO - Epoch:[171/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.08
+2024-12-13 01:04:41,672 - INFO - now the learning rate is: 0.00026379456964547253
+2024-12-13 01:04:42,015 - INFO - begin training stage: [172/350]
+2024-12-13 01:04:43,612 - INFO - Epoch:[172/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.09
+2024-12-13 01:04:45,018 - INFO - Epoch:[172/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 3.05
+2024-12-13 01:04:46,439 - INFO - now the learning rate is: 0.00026159654729718734
+2024-12-13 01:04:46,779 - INFO - begin training stage: [173/350]
+2024-12-13 01:04:48,321 - INFO - Epoch:[173/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.10
+2024-12-13 01:04:49,666 - INFO - Epoch:[173/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.10
+2024-12-13 01:04:51,064 - INFO - now the learning rate is: 0.0002593979934805337
+2024-12-13 01:04:51,391 - INFO - begin training stage: [174/350]
+2024-12-13 01:04:52,929 - INFO - Epoch:[174/350] Step:[10/28] reconstruction_loss: 0.31 contra_loss: 3.27 contra_loss_cluster: 3.13
+2024-12-13 01:04:54,273 - INFO - Epoch:[174/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.04
+2024-12-13 01:04:55,686 - INFO - now the learning rate is: 0.00025719908532784435
+2024-12-13 01:04:56,011 - INFO - begin training stage: [175/350]
+2024-12-13 01:04:57,571 - INFO - Epoch:[175/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.02
+2024-12-13 01:04:58,912 - INFO - Epoch:[175/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 3.02
+2024-12-13 01:05:00,280 - INFO - now the learning rate is: 0.00025499999999999986
+2024-12-13 01:05:00,599 - INFO - begin training stage: [176/350]
+2024-12-13 01:05:02,284 - INFO - Epoch:[176/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.94
+2024-12-13 01:05:03,772 - INFO - Epoch:[176/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.06
+2024-12-13 01:05:05,163 - INFO - now the learning rate is: 0.00025280091467215536
+2024-12-13 01:05:05,475 - INFO - begin training stage: [177/350]
+2024-12-13 01:05:07,027 - INFO - Epoch:[177/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 3.07
+2024-12-13 01:05:08,393 - INFO - Epoch:[177/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.03
+2024-12-13 01:05:09,791 - INFO - now the learning rate is: 0.00025060200651946595
+2024-12-13 01:05:10,111 - INFO - begin training stage: [178/350]
+2024-12-13 01:05:11,670 - INFO - Epoch:[178/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 3.06
+2024-12-13 01:05:13,139 - INFO - Epoch:[178/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 3.05
+2024-12-13 01:05:14,492 - INFO - now the learning rate is: 0.00024840345270281237
+2024-12-13 01:05:14,815 - INFO - begin training stage: [179/350]
+2024-12-13 01:05:16,392 - INFO - Epoch:[179/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.08
+2024-12-13 01:05:17,762 - INFO - Epoch:[179/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.89
+2024-12-13 01:05:19,165 - INFO - now the learning rate is: 0.0002462054303545271
+2024-12-13 01:05:19,479 - INFO - begin training stage: [180/350]
+2024-12-13 01:05:21,044 - INFO - Epoch:[180/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.95
+2024-12-13 01:05:22,419 - INFO - Epoch:[180/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.97
+2024-12-13 01:05:23,783 - INFO - now the learning rate is: 0.00024400811656412365
+2024-12-13 01:05:24,103 - INFO - eval data number: 3570
+2024-12-13 01:05:26,099 - INFO - loading query data ......
+2024-12-13 01:05:27,256 - INFO - retrieval costs: 3.151662826538086
+2024-12-13 01:05:27,393 - INFO - hamming distance computation costs: 0.13711905479431152
+2024-12-13 01:05:27,503 - INFO - hamming ranking costs: 0.10970520973205566
+2024-12-13 01:05:27,503 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:05:27,710 - INFO - similarity labels generation costs: 0.2073349952697754
+2024-12-13 01:05:27,735 - INFO - topK: 5:, map: 0.25298910675381264
+2024-12-13 01:05:27,824 - INFO - topK: 20:, map: 0.18737421532232737
+2024-12-13 01:05:27,995 - INFO - topK: 40:, map: 0.14764083097899217
+2024-12-13 01:05:28,250 - INFO - topK: 60:, map: 0.12131295812960484
+2024-12-13 01:05:28,584 - INFO - topK: 80:, map: 0.10068921086026292
+2024-12-13 01:05:28,998 - INFO - topK: 100:, map: 0.08567305403162613
+2024-12-13 01:05:29,008 - INFO - begin training stage: [181/350]
+2024-12-13 01:05:30,656 - INFO - Epoch:[181/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.99
+2024-12-13 01:05:32,019 - INFO - Epoch:[181/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 2.95
+2024-12-13 01:05:33,399 - INFO - now the learning rate is: 0.00024181168836402838
+2024-12-13 01:05:33,737 - INFO - begin training stage: [182/350]
+2024-12-13 01:05:35,279 - INFO - Epoch:[182/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.98
+2024-12-13 01:05:36,645 - INFO - Epoch:[182/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 3.02
+2024-12-13 01:05:38,009 - INFO - now the learning rate is: 0.00023961632271531801
+2024-12-13 01:05:38,376 - INFO - begin training stage: [183/350]
+2024-12-13 01:05:39,922 - INFO - Epoch:[183/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.98
+2024-12-13 01:05:41,270 - INFO - Epoch:[183/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.27 contra_loss_cluster: 2.97
+2024-12-13 01:05:42,690 - INFO - now the learning rate is: 0.0002374221964934619
+2024-12-13 01:05:43,013 - INFO - begin training stage: [184/350]
+2024-12-13 01:05:44,606 - INFO - Epoch:[184/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 3.01
+2024-12-13 01:05:45,973 - INFO - Epoch:[184/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 2.95
+2024-12-13 01:05:47,414 - INFO - now the learning rate is: 0.00023522948647407158
+2024-12-13 01:05:47,774 - INFO - begin training stage: [185/350]
+2024-12-13 01:05:49,382 - INFO - Epoch:[185/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.96
+2024-12-13 01:05:50,755 - INFO - Epoch:[185/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.95
+2024-12-13 01:05:52,150 - INFO - now the learning rate is: 0.00023303836931865866
+2024-12-13 01:05:52,459 - INFO - begin training stage: [186/350]
+2024-12-13 01:05:54,031 - INFO - Epoch:[186/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.95
+2024-12-13 01:05:55,390 - INFO - Epoch:[186/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.94
+2024-12-13 01:05:56,731 - INFO - now the learning rate is: 0.00023084902156040118
+2024-12-13 01:05:57,050 - INFO - begin training stage: [187/350]
+2024-12-13 01:05:58,582 - INFO - Epoch:[187/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.96
+2024-12-13 01:05:59,952 - INFO - Epoch:[187/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.94
+2024-12-13 01:06:01,329 - INFO - now the learning rate is: 0.00022866161958992118
+2024-12-13 01:06:01,644 - INFO - begin training stage: [188/350]
+2024-12-13 01:06:03,179 - INFO - Epoch:[188/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.90
+2024-12-13 01:06:04,549 - INFO - Epoch:[188/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.95
+2024-12-13 01:06:05,914 - INFO - now the learning rate is: 0.00022647633964107316
+2024-12-13 01:06:06,228 - INFO - begin training stage: [189/350]
+2024-12-13 01:06:07,800 - INFO - Epoch:[189/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.89
+2024-12-13 01:06:09,162 - INFO - Epoch:[189/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.26 contra_loss_cluster: 2.95
+2024-12-13 01:06:10,555 - INFO - now the learning rate is: 0.00022429335777674522
+2024-12-13 01:06:10,880 - INFO - begin training stage: [190/350]
+2024-12-13 01:06:12,523 - INFO - Epoch:[190/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.90
+2024-12-13 01:06:13,936 - INFO - Epoch:[190/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.98
+2024-12-13 01:06:15,330 - INFO - now the learning rate is: 0.00022211284987467422
+2024-12-13 01:06:15,671 - INFO - begin training stage: [191/350]
+2024-12-13 01:06:17,228 - INFO - Epoch:[191/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.98
+2024-12-13 01:06:18,583 - INFO - Epoch:[191/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.96
+2024-12-13 01:06:19,945 - INFO - now the learning rate is: 0.0002199349916132755
+2024-12-13 01:06:20,281 - INFO - begin training stage: [192/350]
+2024-12-13 01:06:21,842 - INFO - Epoch:[192/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.89
+2024-12-13 01:06:23,199 - INFO - Epoch:[192/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.26 contra_loss_cluster: 2.97
+2024-12-13 01:06:24,559 - INFO - now the learning rate is: 0.0002177599584574893
+2024-12-13 01:06:24,879 - INFO - begin training stage: [193/350]
+2024-12-13 01:06:26,412 - INFO - Epoch:[193/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.93
+2024-12-13 01:06:27,758 - INFO - Epoch:[193/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.94
+2024-12-13 01:06:29,127 - INFO - now the learning rate is: 0.0002155879256446437
+2024-12-13 01:06:29,450 - INFO - begin training stage: [194/350]
+2024-12-13 01:06:31,008 - INFO - Epoch:[194/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.94
+2024-12-13 01:06:32,379 - INFO - Epoch:[194/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.30 contra_loss_cluster: 2.89
+2024-12-13 01:06:33,738 - INFO - now the learning rate is: 0.00021341906817033587
+2024-12-13 01:06:34,051 - INFO - begin training stage: [195/350]
+2024-12-13 01:06:35,593 - INFO - Epoch:[195/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.88
+2024-12-13 01:06:36,949 - INFO - Epoch:[195/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.94
+2024-12-13 01:06:38,338 - INFO - now the learning rate is: 0.0002112535607743338
+2024-12-13 01:06:38,644 - INFO - begin training stage: [196/350]
+2024-12-13 01:06:40,226 - INFO - Epoch:[196/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.86
+2024-12-13 01:06:41,613 - INFO - Epoch:[196/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 2.77
+2024-12-13 01:06:43,011 - INFO - now the learning rate is: 0.00020909157792649727
+2024-12-13 01:06:43,345 - INFO - begin training stage: [197/350]
+2024-12-13 01:06:44,904 - INFO - Epoch:[197/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.89
+2024-12-13 01:06:46,270 - INFO - Epoch:[197/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.77
+2024-12-13 01:06:47,623 - INFO - now the learning rate is: 0.0002069332938127215
+2024-12-13 01:06:47,957 - INFO - begin training stage: [198/350]
+2024-12-13 01:06:49,499 - INFO - Epoch:[198/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.89
+2024-12-13 01:06:50,852 - INFO - Epoch:[198/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.90
+2024-12-13 01:06:52,215 - INFO - now the learning rate is: 0.00020477888232090335
+2024-12-13 01:06:52,580 - INFO - begin training stage: [199/350]
+2024-12-13 01:06:54,133 - INFO - Epoch:[199/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.84
+2024-12-13 01:06:55,495 - INFO - Epoch:[199/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.86
+2024-12-13 01:06:56,850 - INFO - now the learning rate is: 0.0002026285170269317
+2024-12-13 01:06:57,172 - INFO - begin training stage: [200/350]
+2024-12-13 01:06:58,724 - INFO - Epoch:[200/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.84
+2024-12-13 01:07:00,111 - INFO - Epoch:[200/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.83
+2024-12-13 01:07:01,489 - INFO - now the learning rate is: 0.00020048237118070277
+2024-12-13 01:07:01,815 - INFO - eval data number: 3570
+2024-12-13 01:07:03,833 - INFO - loading query data ......
+2024-12-13 01:07:05,007 - INFO - retrieval costs: 3.1903703212738037
+2024-12-13 01:07:05,168 - INFO - hamming distance computation costs: 0.1616060733795166
+2024-12-13 01:07:05,277 - INFO - hamming ranking costs: 0.10851240158081055
+2024-12-13 01:07:05,277 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:07:05,485 - INFO - similarity labels generation costs: 0.20784330368041992
+2024-12-13 01:07:05,510 - INFO - topK: 5:, map: 0.2553551198257081
+2024-12-13 01:07:05,598 - INFO - topK: 20:, map: 0.18879598355608343
+2024-12-13 01:07:05,767 - INFO - topK: 40:, map: 0.150579888246285
+2024-12-13 01:07:06,018 - INFO - topK: 60:, map: 0.12317402233828333
+2024-12-13 01:07:06,350 - INFO - topK: 80:, map: 0.10194083918204197
+2024-12-13 01:07:06,761 - INFO - topK: 100:, map: 0.08668733733345951
+2024-12-13 01:07:06,892 - INFO - begin training stage: [201/350]
+2024-12-13 01:07:08,438 - INFO - Epoch:[201/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.87
+2024-12-13 01:07:09,784 - INFO - Epoch:[201/350] Step:[20/28] reconstruction_loss: 0.30 contra_loss: 3.28 contra_loss_cluster: 2.82
+2024-12-13 01:07:11,151 - INFO - now the learning rate is: 0.00019834061769216153
+2024-12-13 01:07:11,473 - INFO - begin training stage: [202/350]
+2024-12-13 01:07:13,009 - INFO - Epoch:[202/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.84
+2024-12-13 01:07:14,370 - INFO - Epoch:[202/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.89
+2024-12-13 01:07:15,736 - INFO - now the learning rate is: 0.00019620342911737113
+2024-12-13 01:07:16,055 - INFO - begin training stage: [203/350]
+2024-12-13 01:07:17,615 - INFO - Epoch:[203/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 2.75
+2024-12-13 01:07:18,970 - INFO - Epoch:[203/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.86
+2024-12-13 01:07:20,379 - INFO - now the learning rate is: 0.0001940709776446104
+2024-12-13 01:07:20,700 - INFO - begin training stage: [204/350]
+2024-12-13 01:07:22,241 - INFO - Epoch:[204/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.74
+2024-12-13 01:07:23,591 - INFO - Epoch:[204/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.82
+2024-12-13 01:07:24,960 - INFO - now the learning rate is: 0.00019194343508050076
+2024-12-13 01:07:25,289 - INFO - begin training stage: [205/350]
+2024-12-13 01:07:26,841 - INFO - Epoch:[205/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.81
+2024-12-13 01:07:28,225 - INFO - Epoch:[205/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.91
+2024-12-13 01:07:29,659 - INFO - now the learning rate is: 0.00018982097283616443
+2024-12-13 01:07:29,977 - INFO - begin training stage: [206/350]
+2024-12-13 01:07:31,545 - INFO - Epoch:[206/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.85
+2024-12-13 01:07:32,892 - INFO - Epoch:[206/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.80
+2024-12-13 01:07:34,240 - INFO - now the learning rate is: 0.00018770376191341425
+2024-12-13 01:07:34,549 - INFO - begin training stage: [207/350]
+2024-12-13 01:07:36,118 - INFO - Epoch:[207/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.82
+2024-12-13 01:07:37,505 - INFO - Epoch:[207/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.84
+2024-12-13 01:07:38,875 - INFO - now the learning rate is: 0.00018559197289097626
+2024-12-13 01:07:39,185 - INFO - begin training stage: [208/350]
+2024-12-13 01:07:40,745 - INFO - Epoch:[208/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.80
+2024-12-13 01:07:42,119 - INFO - Epoch:[208/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.78
+2024-12-13 01:07:43,502 - INFO - now the learning rate is: 0.00018348577591074665
+2024-12-13 01:07:43,811 - INFO - begin training stage: [209/350]
+2024-12-13 01:07:45,363 - INFO - Epoch:[209/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.26 contra_loss_cluster: 2.83
+2024-12-13 01:07:46,736 - INFO - Epoch:[209/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.72
+2024-12-13 01:07:48,126 - INFO - now the learning rate is: 0.0001813853406640841
+2024-12-13 01:07:48,440 - INFO - begin training stage: [210/350]
+2024-12-13 01:07:49,992 - INFO - Epoch:[210/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.75
+2024-12-13 01:07:51,346 - INFO - Epoch:[210/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.79
+2024-12-13 01:07:52,699 - INFO - now the learning rate is: 0.00017929083637813773
+2024-12-13 01:07:53,012 - INFO - begin training stage: [211/350]
+2024-12-13 01:07:54,545 - INFO - Epoch:[211/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.76
+2024-12-13 01:07:55,902 - INFO - Epoch:[211/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.80
+2024-12-13 01:07:57,296 - INFO - now the learning rate is: 0.000177202431802213
+2024-12-13 01:07:57,607 - INFO - begin training stage: [212/350]
+2024-12-13 01:07:59,166 - INFO - Epoch:[212/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.78
+2024-12-13 01:08:00,529 - INFO - Epoch:[212/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.87
+2024-12-13 01:08:01,907 - INFO - now the learning rate is: 0.0001751202951941761
+2024-12-13 01:08:02,228 - INFO - begin training stage: [213/350]
+2024-12-13 01:08:03,782 - INFO - Epoch:[213/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.79
+2024-12-13 01:08:05,151 - INFO - Epoch:[213/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.78
+2024-12-13 01:08:06,535 - INFO - now the learning rate is: 0.00017304459430689774
+2024-12-13 01:08:06,853 - INFO - begin training stage: [214/350]
+2024-12-13 01:08:08,407 - INFO - Epoch:[214/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.86
+2024-12-13 01:08:09,775 - INFO - Epoch:[214/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.84
+2024-12-13 01:08:11,135 - INFO - now the learning rate is: 0.00017097549637473767
+2024-12-13 01:08:11,452 - INFO - begin training stage: [215/350]
+2024-12-13 01:08:13,003 - INFO - Epoch:[215/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.76
+2024-12-13 01:08:14,384 - INFO - Epoch:[215/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.80
+2024-12-13 01:08:15,745 - INFO - now the learning rate is: 0.00016891316810007092
+2024-12-13 01:08:16,051 - INFO - begin training stage: [216/350]
+2024-12-13 01:08:17,620 - INFO - Epoch:[216/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.71
+2024-12-13 01:08:18,974 - INFO - Epoch:[216/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.81
+2024-12-13 01:08:20,332 - INFO - now the learning rate is: 0.00016685777563985724
+2024-12-13 01:08:20,652 - INFO - begin training stage: [217/350]
+2024-12-13 01:08:22,215 - INFO - Epoch:[217/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.77
+2024-12-13 01:08:23,573 - INFO - Epoch:[217/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.76
+2024-12-13 01:08:24,933 - INFO - now the learning rate is: 0.00016480948459225383
+2024-12-13 01:08:25,249 - INFO - begin training stage: [218/350]
+2024-12-13 01:08:26,780 - INFO - Epoch:[218/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.85
+2024-12-13 01:08:28,128 - INFO - Epoch:[218/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.70
+2024-12-13 01:08:29,507 - INFO - now the learning rate is: 0.00016276845998327387
+2024-12-13 01:08:29,845 - INFO - begin training stage: [219/350]
+2024-12-13 01:08:31,427 - INFO - Epoch:[219/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.26 contra_loss_cluster: 2.76
+2024-12-13 01:08:32,780 - INFO - Epoch:[219/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.68
+2024-12-13 01:08:34,154 - INFO - now the learning rate is: 0.0001607348662534905
+2024-12-13 01:08:34,456 - INFO - begin training stage: [220/350]
+2024-12-13 01:08:35,979 - INFO - Epoch:[220/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.76
+2024-12-13 01:08:37,329 - INFO - Epoch:[220/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.79
+2024-12-13 01:08:38,663 - INFO - now the learning rate is: 0.00015870886724478854
+2024-12-13 01:08:39,016 - INFO - eval data number: 3570
+2024-12-13 01:08:41,031 - INFO - loading query data ......
+2024-12-13 01:08:42,183 - INFO - retrieval costs: 3.165954113006592
+2024-12-13 01:08:42,322 - INFO - hamming distance computation costs: 0.13921880722045898
+2024-12-13 01:08:42,430 - INFO - hamming ranking costs: 0.10792160034179688
+2024-12-13 01:08:42,430 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:08:42,636 - INFO - similarity labels generation costs: 0.20602130889892578
+2024-12-13 01:08:42,661 - INFO - topK: 5:, map: 0.24645098039215685
+2024-12-13 01:08:42,748 - INFO - topK: 20:, map: 0.1839289546069618
+2024-12-13 01:08:42,918 - INFO - topK: 40:, map: 0.14778111452085602
+2024-12-13 01:08:43,168 - INFO - topK: 60:, map: 0.12157842354760624
+2024-12-13 01:08:43,505 - INFO - topK: 80:, map: 0.10051636283137137
+2024-12-13 01:08:43,927 - INFO - topK: 100:, map: 0.08562923612671373
+2024-12-13 01:08:43,936 - INFO - begin training stage: [221/350]
+2024-12-13 01:08:45,516 - INFO - Epoch:[221/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.76
+2024-12-13 01:08:46,866 - INFO - Epoch:[221/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.77
+2024-12-13 01:08:48,326 - INFO - now the learning rate is: 0.0001566906261871637
+2024-12-13 01:08:48,676 - INFO - begin training stage: [222/350]
+2024-12-13 01:08:50,275 - INFO - Epoch:[222/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.72
+2024-12-13 01:08:51,681 - INFO - Epoch:[222/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.66
+2024-12-13 01:08:53,065 - INFO - now the learning rate is: 0.0001546803056855717
+2024-12-13 01:08:53,388 - INFO - begin training stage: [223/350]
+2024-12-13 01:08:54,979 - INFO - Epoch:[223/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.71
+2024-12-13 01:08:56,373 - INFO - Epoch:[223/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.68
+2024-12-13 01:08:57,735 - INFO - now the learning rate is: 0.00015267806770682778
+2024-12-13 01:08:58,064 - INFO - begin training stage: [224/350]
+2024-12-13 01:08:59,588 - INFO - Epoch:[224/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 2.68
+2024-12-13 01:09:00,938 - INFO - Epoch:[224/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.62
+2024-12-13 01:09:02,394 - INFO - now the learning rate is: 0.00015068407356655708
+2024-12-13 01:09:02,742 - INFO - begin training stage: [225/350]
+2024-12-13 01:09:04,363 - INFO - Epoch:[225/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.69
+2024-12-13 01:09:05,771 - INFO - Epoch:[225/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.65
+2024-12-13 01:09:07,161 - INFO - now the learning rate is: 0.00014869848391619816
+2024-12-13 01:09:07,500 - INFO - begin training stage: [226/350]
+2024-12-13 01:09:09,193 - INFO - Epoch:[226/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.75
+2024-12-13 01:09:10,616 - INFO - Epoch:[226/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 2.73
+2024-12-13 01:09:11,985 - INFO - now the learning rate is: 0.0001467214587300594
+2024-12-13 01:09:12,291 - INFO - begin training stage: [227/350]
+2024-12-13 01:09:13,859 - INFO - Epoch:[227/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.76
+2024-12-13 01:09:15,288 - INFO - Epoch:[227/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.72
+2024-12-13 01:09:16,780 - INFO - now the learning rate is: 0.0001447531572924302
+2024-12-13 01:09:17,135 - INFO - begin training stage: [228/350]
+2024-12-13 01:09:18,752 - INFO - Epoch:[228/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.76
+2024-12-13 01:09:20,151 - INFO - Epoch:[228/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.75
+2024-12-13 01:09:21,574 - INFO - now the learning rate is: 0.00014279373818474838
+2024-12-13 01:09:21,896 - INFO - begin training stage: [229/350]
+2024-12-13 01:09:23,440 - INFO - Epoch:[229/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.28 contra_loss_cluster: 2.73
+2024-12-13 01:09:24,803 - INFO - Epoch:[229/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.73
+2024-12-13 01:09:26,283 - INFO - now the learning rate is: 0.0001408433592728229
+2024-12-13 01:09:26,622 - INFO - begin training stage: [230/350]
+2024-12-13 01:09:28,213 - INFO - Epoch:[230/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.28 contra_loss_cluster: 2.66
+2024-12-13 01:09:29,620 - INFO - Epoch:[230/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.61
+2024-12-13 01:09:31,019 - INFO - now the learning rate is: 0.00013890217769411522
+2024-12-13 01:09:31,358 - INFO - begin training stage: [231/350]
+2024-12-13 01:09:32,937 - INFO - Epoch:[231/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.74
+2024-12-13 01:09:34,327 - INFO - Epoch:[231/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.26 contra_loss_cluster: 2.71
+2024-12-13 01:09:35,813 - INFO - now the learning rate is: 0.00013697034984507962
+2024-12-13 01:09:36,148 - INFO - begin training stage: [232/350]
+2024-12-13 01:09:37,790 - INFO - Epoch:[232/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.72
+2024-12-13 01:09:39,199 - INFO - Epoch:[232/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.61
+2024-12-13 01:09:40,623 - INFO - now the learning rate is: 0.00013504803136856204
+2024-12-13 01:09:40,923 - INFO - begin training stage: [233/350]
+2024-12-13 01:09:42,511 - INFO - Epoch:[233/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.66
+2024-12-13 01:09:43,925 - INFO - Epoch:[233/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 2.67
+2024-12-13 01:09:45,349 - INFO - now the learning rate is: 0.00013313537714126054
+2024-12-13 01:09:45,658 - INFO - begin training stage: [234/350]
+2024-12-13 01:09:47,254 - INFO - Epoch:[234/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.69
+2024-12-13 01:09:48,666 - INFO - Epoch:[234/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.66
+2024-12-13 01:09:50,069 - INFO - now the learning rate is: 0.00013123254126124715
+2024-12-13 01:09:50,394 - INFO - begin training stage: [235/350]
+2024-12-13 01:09:52,016 - INFO - Epoch:[235/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.68
+2024-12-13 01:09:53,424 - INFO - Epoch:[235/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.70
+2024-12-13 01:09:54,838 - INFO - now the learning rate is: 0.00012933967703555294
+2024-12-13 01:09:55,156 - INFO - begin training stage: [236/350]
+2024-12-13 01:09:56,740 - INFO - Epoch:[236/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.28 contra_loss_cluster: 2.71
+2024-12-13 01:09:58,145 - INFO - Epoch:[236/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.69
+2024-12-13 01:09:59,554 - INFO - now the learning rate is: 0.00012745693696781588
+2024-12-13 01:09:59,860 - INFO - begin training stage: [237/350]
+2024-12-13 01:10:01,457 - INFO - Epoch:[237/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.75
+2024-12-13 01:10:02,861 - INFO - Epoch:[237/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.26 contra_loss_cluster: 2.68
+2024-12-13 01:10:04,277 - INFO - now the learning rate is: 0.00012558447274599427
+2024-12-13 01:10:04,620 - INFO - begin training stage: [238/350]
+2024-12-13 01:10:06,186 - INFO - Epoch:[238/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.69
+2024-12-13 01:10:07,576 - INFO - Epoch:[238/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.63
+2024-12-13 01:10:09,016 - INFO - now the learning rate is: 0.0001237224352301458
+2024-12-13 01:10:09,376 - INFO - begin training stage: [239/350]
+2024-12-13 01:10:10,993 - INFO - Epoch:[239/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.61
+2024-12-13 01:10:12,398 - INFO - Epoch:[239/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.70
+2024-12-13 01:10:13,827 - INFO - now the learning rate is: 0.00012187097444027261
+2024-12-13 01:10:14,136 - INFO - begin training stage: [240/350]
+2024-12-13 01:10:15,728 - INFO - Epoch:[240/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.68
+2024-12-13 01:10:17,128 - INFO - Epoch:[240/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.74
+2024-12-13 01:10:18,542 - INFO - now the learning rate is: 0.00012003023954423485
+2024-12-13 01:10:18,868 - INFO - eval data number: 3570
+2024-12-13 01:10:20,830 - INFO - loading query data ......
+2024-12-13 01:10:21,959 - INFO - retrieval costs: 3.0908727645874023
+2024-12-13 01:10:22,081 - INFO - hamming distance computation costs: 0.12150120735168457
+2024-12-13 01:10:22,193 - INFO - hamming ranking costs: 0.11206269264221191
+2024-12-13 01:10:22,193 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:10:22,393 - INFO - similarity labels generation costs: 0.19997382164001465
+2024-12-13 01:10:22,427 - INFO - topK: 5:, map: 0.256281045751634
+2024-12-13 01:10:22,540 - INFO - topK: 20:, map: 0.18880632174444018
+2024-12-13 01:10:22,766 - INFO - topK: 40:, map: 0.15031906837435272
+2024-12-13 01:10:23,095 - INFO - topK: 60:, map: 0.1236753690961455
+2024-12-13 01:10:23,536 - INFO - topK: 80:, map: 0.10287342924669607
+2024-12-13 01:10:24,089 - INFO - topK: 100:, map: 0.08789364583191578
+2024-12-13 01:10:24,224 - INFO - begin training stage: [241/350]
+2024-12-13 01:10:25,831 - INFO - Epoch:[241/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.26 contra_loss_cluster: 2.67
+2024-12-13 01:10:27,240 - INFO - Epoch:[241/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.66
+2024-12-13 01:10:28,702 - INFO - now the learning rate is: 0.00011820037884573258
+2024-12-13 01:10:29,036 - INFO - begin training stage: [242/350]
+2024-12-13 01:10:30,646 - INFO - Epoch:[242/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.61
+2024-12-13 01:10:32,063 - INFO - Epoch:[242/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 2.60
+2024-12-13 01:10:33,463 - INFO - now the learning rate is: 0.0001163815397723574
+2024-12-13 01:10:33,763 - INFO - begin training stage: [243/350]
+2024-12-13 01:10:35,366 - INFO - Epoch:[243/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.65
+2024-12-13 01:10:36,703 - INFO - Epoch:[243/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.63
+2024-12-13 01:10:38,082 - INFO - now the learning rate is: 0.00011457386886371402
+2024-12-13 01:10:38,391 - INFO - begin training stage: [244/350]
+2024-12-13 01:10:39,941 - INFO - Epoch:[244/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.65
+2024-12-13 01:10:41,290 - INFO - Epoch:[244/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.64
+2024-12-13 01:10:42,702 - INFO - now the learning rate is: 0.00011277751175961443
+2024-12-13 01:10:43,045 - INFO - begin training stage: [245/350]
+2024-12-13 01:10:44,611 - INFO - Epoch:[245/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.63
+2024-12-13 01:10:45,960 - INFO - Epoch:[245/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.62
+2024-12-13 01:10:47,345 - INFO - now the learning rate is: 0.00011099261318834406
+2024-12-13 01:10:47,647 - INFO - begin training stage: [246/350]
+2024-12-13 01:10:49,196 - INFO - Epoch:[246/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.71
+2024-12-13 01:10:50,596 - INFO - Epoch:[246/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.57
+2024-12-13 01:10:51,990 - INFO - now the learning rate is: 0.00010921931695500091
+2024-12-13 01:10:52,291 - INFO - begin training stage: [247/350]
+2024-12-13 01:10:53,848 - INFO - Epoch:[247/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.63
+2024-12-13 01:10:55,211 - INFO - Epoch:[247/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.61
+2024-12-13 01:10:56,592 - INFO - now the learning rate is: 0.00010745776592990983
+2024-12-13 01:10:56,922 - INFO - begin training stage: [248/350]
+2024-12-13 01:10:58,460 - INFO - Epoch:[248/350] Step:[10/28] reconstruction_loss: 0.30 contra_loss: 3.29 contra_loss_cluster: 2.65
+2024-12-13 01:10:59,808 - INFO - Epoch:[248/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.59
+2024-12-13 01:11:01,147 - INFO - now the learning rate is: 0.000105708102037112
+2024-12-13 01:11:01,451 - INFO - begin training stage: [249/350]
+2024-12-13 01:11:02,987 - INFO - Epoch:[249/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.68
+2024-12-13 01:11:04,331 - INFO - Epoch:[249/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.67
+2024-12-13 01:11:05,674 - INFO - now the learning rate is: 0.00010397046624292988
+2024-12-13 01:11:05,979 - INFO - begin training stage: [250/350]
+2024-12-13 01:11:07,507 - INFO - Epoch:[250/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 2.61
+2024-12-13 01:11:08,855 - INFO - Epoch:[250/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.66
+2024-12-13 01:11:10,235 - INFO - now the learning rate is: 0.00010224499854461027
+2024-12-13 01:11:10,535 - INFO - begin training stage: [251/350]
+2024-12-13 01:11:12,068 - INFO - Epoch:[251/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.57
+2024-12-13 01:11:13,441 - INFO - Epoch:[251/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.67
+2024-12-13 01:11:14,824 - INFO - now the learning rate is: 0.00010053183795904507
+2024-12-13 01:11:15,128 - INFO - begin training stage: [252/350]
+2024-12-13 01:11:16,693 - INFO - Epoch:[252/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.61
+2024-12-13 01:11:18,081 - INFO - Epoch:[252/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.64
+2024-12-13 01:11:19,456 - INFO - now the learning rate is: 9.883112251157099e-05
+2024-12-13 01:11:19,767 - INFO - begin training stage: [253/350]
+2024-12-13 01:11:21,317 - INFO - Epoch:[253/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.28 contra_loss_cluster: 2.59
+2024-12-13 01:11:22,649 - INFO - Epoch:[253/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.53
+2024-12-13 01:11:24,034 - INFO - now the learning rate is: 9.71429892248489e-05
+2024-12-13 01:11:24,333 - INFO - begin training stage: [254/350]
+2024-12-13 01:11:25,891 - INFO - Epoch:[254/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.53
+2024-12-13 01:11:27,237 - INFO - Epoch:[254/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.63
+2024-12-13 01:11:28,658 - INFO - now the learning rate is: 9.546757410782444e-05
+2024-12-13 01:11:28,956 - INFO - begin training stage: [255/350]
+2024-12-13 01:11:30,511 - INFO - Epoch:[255/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.63
+2024-12-13 01:11:31,878 - INFO - Epoch:[255/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.57
+2024-12-13 01:11:33,249 - INFO - now the learning rate is: 9.380501214477039e-05
+2024-12-13 01:11:33,548 - INFO - begin training stage: [256/350]
+2024-12-13 01:11:35,086 - INFO - Epoch:[256/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.61
+2024-12-13 01:11:36,446 - INFO - Epoch:[256/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.61
+2024-12-13 01:11:37,823 - INFO - now the learning rate is: 9.215543728441075e-05
+2024-12-13 01:11:38,126 - INFO - begin training stage: [257/350]
+2024-12-13 01:11:39,668 - INFO - Epoch:[257/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.61
+2024-12-13 01:11:41,058 - INFO - Epoch:[257/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.62
+2024-12-13 01:11:42,430 - INFO - now the learning rate is: 9.0518982429129e-05
+2024-12-13 01:11:42,759 - INFO - begin training stage: [258/350]
+2024-12-13 01:11:44,298 - INFO - Epoch:[258/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.63
+2024-12-13 01:11:45,656 - INFO - Epoch:[258/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.52
+2024-12-13 01:11:47,020 - INFO - now the learning rate is: 8.889577942426091e-05
+2024-12-13 01:11:47,324 - INFO - begin training stage: [259/350]
+2024-12-13 01:11:48,877 - INFO - Epoch:[259/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.58
+2024-12-13 01:11:50,259 - INFO - Epoch:[259/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.63
+2024-12-13 01:11:51,640 - INFO - now the learning rate is: 8.728595904747132e-05
+2024-12-13 01:11:51,963 - INFO - begin training stage: [260/350]
+2024-12-13 01:11:53,511 - INFO - Epoch:[260/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.63
+2024-12-13 01:11:54,884 - INFO - Epoch:[260/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.64
+2024-12-13 01:11:56,246 - INFO - now the learning rate is: 8.568965099821814e-05
+2024-12-13 01:11:56,540 - INFO - eval data number: 3570
+2024-12-13 01:11:58,508 - INFO - loading query data ......
+2024-12-13 01:11:59,652 - INFO - retrieval costs: 3.110715627670288
+2024-12-13 01:11:59,780 - INFO - hamming distance computation costs: 0.12844061851501465
+2024-12-13 01:11:59,898 - INFO - hamming ranking costs: 0.11739993095397949
+2024-12-13 01:11:59,898 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:12:00,106 - INFO - similarity labels generation costs: 0.20874547958374023
+2024-12-13 01:12:00,131 - INFO - topK: 5:, map: 0.2500261437908497
+2024-12-13 01:12:00,219 - INFO - topK: 20:, map: 0.18477649120806866
+2024-12-13 01:12:00,388 - INFO - topK: 40:, map: 0.14752669146718073
+2024-12-13 01:12:00,639 - INFO - topK: 60:, map: 0.12129590255747533
+2024-12-13 01:12:00,970 - INFO - topK: 80:, map: 0.1009833658276276
+2024-12-13 01:12:01,385 - INFO - topK: 100:, map: 0.0861981318250306
+2024-12-13 01:12:01,394 - INFO - begin training stage: [261/350]
+2024-12-13 01:12:02,969 - INFO - Epoch:[261/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.54
+2024-12-13 01:12:04,331 - INFO - Epoch:[261/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.56
+2024-12-13 01:12:05,668 - INFO - now the learning rate is: 8.410698388730295e-05
+2024-12-13 01:12:05,972 - INFO - begin training stage: [262/350]
+2024-12-13 01:12:07,529 - INFO - Epoch:[262/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.56
+2024-12-13 01:12:08,917 - INFO - Epoch:[262/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.62
+2024-12-13 01:12:10,291 - INFO - now the learning rate is: 8.253808522650848e-05
+2024-12-13 01:12:10,603 - INFO - begin training stage: [263/350]
+2024-12-13 01:12:12,148 - INFO - Epoch:[263/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.60
+2024-12-13 01:12:13,518 - INFO - Epoch:[263/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.60
+2024-12-13 01:12:14,902 - INFO - now the learning rate is: 8.098308141832604e-05
+2024-12-13 01:12:15,189 - INFO - begin training stage: [264/350]
+2024-12-13 01:12:16,744 - INFO - Epoch:[264/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.57
+2024-12-13 01:12:18,098 - INFO - Epoch:[264/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.59
+2024-12-13 01:12:19,439 - INFO - now the learning rate is: 7.944209774577088e-05
+2024-12-13 01:12:19,761 - INFO - begin training stage: [265/350]
+2024-12-13 01:12:21,297 - INFO - Epoch:[265/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.26 contra_loss_cluster: 2.56
+2024-12-13 01:12:22,650 - INFO - Epoch:[265/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.52
+2024-12-13 01:12:24,000 - INFO - now the learning rate is: 7.791525836228908e-05
+2024-12-13 01:12:24,320 - INFO - begin training stage: [266/350]
+2024-12-13 01:12:25,855 - INFO - Epoch:[266/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.61
+2024-12-13 01:12:27,222 - INFO - Epoch:[266/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.56
+2024-12-13 01:12:28,606 - INFO - now the learning rate is: 7.640268628175421e-05
+2024-12-13 01:12:28,908 - INFO - begin training stage: [267/350]
+2024-12-13 01:12:30,435 - INFO - Epoch:[267/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.63
+2024-12-13 01:12:31,782 - INFO - Epoch:[267/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.63
+2024-12-13 01:12:33,123 - INFO - now the learning rate is: 7.490450336855668e-05
+2024-12-13 01:12:33,443 - INFO - begin training stage: [268/350]
+2024-12-13 01:12:34,966 - INFO - Epoch:[268/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.58
+2024-12-13 01:12:36,312 - INFO - Epoch:[268/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.55
+2024-12-13 01:12:37,703 - INFO - now the learning rate is: 7.342083032778558e-05
+2024-12-13 01:12:38,052 - INFO - begin training stage: [269/350]
+2024-12-13 01:12:39,576 - INFO - Epoch:[269/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 2.59
+2024-12-13 01:12:40,955 - INFO - Epoch:[269/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.62
+2024-12-13 01:12:42,348 - INFO - now the learning rate is: 7.195178669550337e-05
+2024-12-13 01:12:42,648 - INFO - begin training stage: [270/350]
+2024-12-13 01:12:44,183 - INFO - Epoch:[270/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.28 contra_loss_cluster: 2.54
+2024-12-13 01:12:45,561 - INFO - Epoch:[270/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 2.48
+2024-12-13 01:12:46,933 - INFO - now the learning rate is: 7.049749082911532e-05
+2024-12-13 01:12:47,228 - INFO - begin training stage: [271/350]
+2024-12-13 01:12:48,793 - INFO - Epoch:[271/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.57
+2024-12-13 01:12:50,177 - INFO - Epoch:[271/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.53
+2024-12-13 01:12:51,539 - INFO - now the learning rate is: 6.90580598978339e-05
+2024-12-13 01:12:51,839 - INFO - begin training stage: [272/350]
+2024-12-13 01:12:53,378 - INFO - Epoch:[272/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.57
+2024-12-13 01:12:54,744 - INFO - Epoch:[272/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 2.48
+2024-12-13 01:12:56,116 - INFO - now the learning rate is: 6.763360987323837e-05
+2024-12-13 01:12:56,429 - INFO - begin training stage: [273/350]
+2024-12-13 01:12:57,979 - INFO - Epoch:[273/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.58
+2024-12-13 01:12:59,368 - INFO - Epoch:[273/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.54
+2024-12-13 01:13:00,778 - INFO - now the learning rate is: 6.622425551993165e-05
+2024-12-13 01:13:01,121 - INFO - begin training stage: [274/350]
+2024-12-13 01:13:02,695 - INFO - Epoch:[274/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.58
+2024-12-13 01:13:04,074 - INFO - Epoch:[274/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.53
+2024-12-13 01:13:05,439 - INFO - now the learning rate is: 6.48301103862935e-05
+2024-12-13 01:13:05,751 - INFO - begin training stage: [275/350]
+2024-12-13 01:13:07,301 - INFO - Epoch:[275/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.54
+2024-12-13 01:13:08,654 - INFO - Epoch:[275/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.50
+2024-12-13 01:13:10,204 - INFO - now the learning rate is: 6.34512867953327e-05
+2024-12-13 01:13:10,558 - INFO - begin training stage: [276/350]
+2024-12-13 01:13:12,172 - INFO - Epoch:[276/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.50
+2024-12-13 01:13:13,560 - INFO - Epoch:[276/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.60
+2024-12-13 01:13:14,963 - INFO - now the learning rate is: 6.208789583563711e-05
+2024-12-13 01:13:15,269 - INFO - begin training stage: [277/350]
+2024-12-13 01:13:16,827 - INFO - Epoch:[277/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 2.50
+2024-12-13 01:13:18,195 - INFO - Epoch:[277/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.65
+2024-12-13 01:13:19,561 - INFO - now the learning rate is: 6.0740047352423555e-05
+2024-12-13 01:13:19,890 - INFO - begin training stage: [278/350]
+2024-12-13 01:13:21,440 - INFO - Epoch:[278/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.59
+2024-12-13 01:13:22,826 - INFO - Epoch:[278/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.56
+2024-12-13 01:13:24,207 - INFO - now the learning rate is: 5.940784993868817e-05
+2024-12-13 01:13:24,508 - INFO - begin training stage: [279/350]
+2024-12-13 01:13:26,060 - INFO - Epoch:[279/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.63
+2024-12-13 01:13:27,438 - INFO - Epoch:[279/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.52
+2024-12-13 01:13:28,815 - INFO - now the learning rate is: 5.809141092645681e-05
+2024-12-13 01:13:29,107 - INFO - begin training stage: [280/350]
+2024-12-13 01:13:30,654 - INFO - Epoch:[280/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.56
+2024-12-13 01:13:32,317 - INFO - Epoch:[280/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.54
+2024-12-13 01:13:33,683 - INFO - now the learning rate is: 5.679083637813791e-05
+2024-12-13 01:13:33,984 - INFO - eval data number: 3570
+2024-12-13 01:13:36,045 - INFO - loading query data ......
+2024-12-13 01:13:37,229 - INFO - retrieval costs: 3.244431257247925
+2024-12-13 01:13:37,332 - INFO - hamming distance computation costs: 0.10286521911621094
+2024-12-13 01:13:37,444 - INFO - hamming ranking costs: 0.11190223693847656
+2024-12-13 01:13:37,444 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:13:37,644 - INFO - similarity labels generation costs: 0.2002708911895752
+2024-12-13 01:13:37,669 - INFO - topK: 5:, map: 0.2506971677559913
+2024-12-13 01:13:37,757 - INFO - topK: 20:, map: 0.1858635161799165
+2024-12-13 01:13:37,926 - INFO - topK: 40:, map: 0.1487281897329736
+2024-12-13 01:13:38,179 - INFO - topK: 60:, map: 0.12174501600268056
+2024-12-13 01:13:38,514 - INFO - topK: 80:, map: 0.10105101367922098
+2024-12-13 01:13:38,931 - INFO - topK: 100:, map: 0.08616104591670785
+2024-12-13 01:13:38,940 - INFO - begin training stage: [281/350]
+2024-12-13 01:13:40,526 - INFO - Epoch:[281/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.54
+2024-12-13 01:13:41,890 - INFO - Epoch:[281/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.58
+2024-12-13 01:13:43,276 - INFO - now the learning rate is: 5.550623107797729e-05
+2024-12-13 01:13:43,583 - INFO - begin training stage: [282/350]
+2024-12-13 01:13:45,130 - INFO - Epoch:[282/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.50
+2024-12-13 01:13:46,535 - INFO - Epoch:[282/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.57
+2024-12-13 01:13:47,913 - INFO - now the learning rate is: 5.423769852361575e-05
+2024-12-13 01:13:48,219 - INFO - begin training stage: [283/350]
+2024-12-13 01:13:49,789 - INFO - Epoch:[283/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.51
+2024-12-13 01:13:51,151 - INFO - Epoch:[283/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.45
+2024-12-13 01:13:52,535 - INFO - now the learning rate is: 5.2985340917750486e-05
+2024-12-13 01:13:52,843 - INFO - begin training stage: [284/350]
+2024-12-13 01:13:54,353 - INFO - Epoch:[284/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.48
+2024-12-13 01:13:55,691 - INFO - Epoch:[284/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.59
+2024-12-13 01:13:57,028 - INFO - now the learning rate is: 5.1749259159901366e-05
+2024-12-13 01:13:57,340 - INFO - begin training stage: [285/350]
+2024-12-13 01:13:58,926 - INFO - Epoch:[285/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.54
+2024-12-13 01:14:00,281 - INFO - Epoch:[285/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.48
+2024-12-13 01:14:01,650 - INFO - now the learning rate is: 5.0529552838280854e-05
+2024-12-13 01:14:01,960 - INFO - begin training stage: [286/350]
+2024-12-13 01:14:03,501 - INFO - Epoch:[286/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.41
+2024-12-13 01:14:04,858 - INFO - Epoch:[286/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.54
+2024-12-13 01:14:06,213 - INFO - now the learning rate is: 4.932632022177107e-05
+2024-12-13 01:14:06,520 - INFO - begin training stage: [287/350]
+2024-12-13 01:14:08,063 - INFO - Epoch:[287/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.53
+2024-12-13 01:14:09,415 - INFO - Epoch:[287/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.57
+2024-12-13 01:14:10,793 - INFO - now the learning rate is: 4.813965825200631e-05
+2024-12-13 01:14:11,092 - INFO - begin training stage: [288/350]
+2024-12-13 01:14:12,621 - INFO - Epoch:[288/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.50
+2024-12-13 01:14:13,971 - INFO - Epoch:[288/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.45
+2024-12-13 01:14:15,355 - INFO - now the learning rate is: 4.6969662535562596e-05
+2024-12-13 01:14:15,660 - INFO - begin training stage: [289/350]
+2024-12-13 01:14:17,195 - INFO - Epoch:[289/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.51
+2024-12-13 01:14:18,659 - INFO - Epoch:[289/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.51
+2024-12-13 01:14:20,145 - INFO - now the learning rate is: 4.5816427336254914e-05
+2024-12-13 01:14:20,491 - INFO - begin training stage: [290/350]
+2024-12-13 01:14:22,135 - INFO - Epoch:[290/350] Step:[10/28] reconstruction_loss: 0.26 contra_loss: 3.28 contra_loss_cluster: 2.42
+2024-12-13 01:14:23,540 - INFO - Epoch:[290/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.48
+2024-12-13 01:14:24,952 - INFO - now the learning rate is: 4.468004556754281e-05
+2024-12-13 01:14:25,290 - INFO - begin training stage: [291/350]
+2024-12-13 01:14:26,842 - INFO - Epoch:[291/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.53
+2024-12-13 01:14:28,197 - INFO - Epoch:[291/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.28 contra_loss_cluster: 2.51
+2024-12-13 01:14:29,570 - INFO - now the learning rate is: 4.35606087850442e-05
+2024-12-13 01:14:29,889 - INFO - begin training stage: [292/350]
+2024-12-13 01:14:31,430 - INFO - Epoch:[292/350] Step:[10/28] reconstruction_loss: 0.26 contra_loss: 3.28 contra_loss_cluster: 2.51
+2024-12-13 01:14:32,798 - INFO - Epoch:[292/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.54
+2024-12-13 01:14:34,164 - INFO - now the learning rate is: 4.24582071791592e-05
+2024-12-13 01:14:34,472 - INFO - begin training stage: [293/350]
+2024-12-13 01:14:36,019 - INFO - Epoch:[293/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.58
+2024-12-13 01:14:37,434 - INFO - Epoch:[293/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.48
+2024-12-13 01:14:38,924 - INFO - now the learning rate is: 4.137292956780373e-05
+2024-12-13 01:14:39,228 - INFO - begin training stage: [294/350]
+2024-12-13 01:14:40,785 - INFO - Epoch:[294/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.57
+2024-12-13 01:14:42,153 - INFO - Epoch:[294/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.41
+2024-12-13 01:14:43,638 - INFO - now the learning rate is: 4.030486338925343e-05
+2024-12-13 01:14:43,988 - INFO - begin training stage: [295/350]
+2024-12-13 01:14:45,595 - INFO - Epoch:[295/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.51
+2024-12-13 01:14:47,004 - INFO - Epoch:[295/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.45
+2024-12-13 01:14:48,428 - INFO - now the learning rate is: 3.9254094695099195e-05
+2024-12-13 01:14:48,732 - INFO - begin training stage: [296/350]
+2024-12-13 01:14:50,298 - INFO - Epoch:[296/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.51
+2024-12-13 01:14:51,667 - INFO - Epoch:[296/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.50
+2024-12-13 01:14:53,058 - INFO - now the learning rate is: 3.822070814331407e-05
+2024-12-13 01:14:53,356 - INFO - begin training stage: [297/350]
+2024-12-13 01:14:54,949 - INFO - Epoch:[297/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.41
+2024-12-13 01:14:56,318 - INFO - Epoch:[297/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.50
+2024-12-13 01:14:57,714 - INFO - now the learning rate is: 3.720478699143267e-05
+2024-12-13 01:14:58,015 - INFO - begin training stage: [298/350]
+2024-12-13 01:14:59,570 - INFO - Epoch:[298/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.55
+2024-12-13 01:15:00,916 - INFO - Epoch:[298/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.53
+2024-12-13 01:15:02,271 - INFO - now the learning rate is: 3.6206413089843106e-05
+2024-12-13 01:15:02,577 - INFO - begin training stage: [299/350]
+2024-12-13 01:15:04,120 - INFO - Epoch:[299/350] Step:[10/28] reconstruction_loss: 0.26 contra_loss: 3.28 contra_loss_cluster: 2.43
+2024-12-13 01:15:05,454 - INFO - Epoch:[299/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.48
+2024-12-13 01:15:06,830 - INFO - now the learning rate is: 3.522566687519268e-05
+2024-12-13 01:15:07,132 - INFO - begin training stage: [300/350]
+2024-12-13 01:15:08,673 - INFO - Epoch:[300/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.48
+2024-12-13 01:15:10,014 - INFO - Epoch:[300/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.51
+2024-12-13 01:15:11,503 - INFO - now the learning rate is: 3.426262736390734e-05
+2024-12-13 01:15:11,795 - INFO - eval data number: 3570
+2024-12-13 01:15:13,929 - INFO - loading query data ......
+2024-12-13 01:15:15,141 - INFO - retrieval costs: 3.344397783279419
+2024-12-13 01:15:15,242 - INFO - hamming distance computation costs: 0.10159063339233398
+2024-12-13 01:15:15,355 - INFO - hamming ranking costs: 0.11236262321472168
+2024-12-13 01:15:15,355 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:15:15,558 - INFO - similarity labels generation costs: 0.20310640335083008
+2024-12-13 01:15:15,583 - INFO - topK: 5:, map: 0.25378867102396513
+2024-12-13 01:15:15,670 - INFO - topK: 20:, map: 0.1854668329252649
+2024-12-13 01:15:15,840 - INFO - topK: 40:, map: 0.14833322833906998
+2024-12-13 01:15:16,092 - INFO - topK: 60:, map: 0.12150095234301705
+2024-12-13 01:15:16,426 - INFO - topK: 80:, map: 0.10074037357060185
+2024-12-13 01:15:16,841 - INFO - topK: 100:, map: 0.0858810035166007
+2024-12-13 01:15:16,850 - INFO - begin training stage: [301/350]
+2024-12-13 01:15:18,427 - INFO - Epoch:[301/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.52
+2024-12-13 01:15:19,813 - INFO - Epoch:[301/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.48
+2024-12-13 01:15:21,190 - INFO - now the learning rate is: 3.331737214582527e-05
+2024-12-13 01:15:21,484 - INFO - begin training stage: [302/350]
+2024-12-13 01:15:23,051 - INFO - Epoch:[302/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.52
+2024-12-13 01:15:24,415 - INFO - Epoch:[302/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.51
+2024-12-13 01:15:25,815 - INFO - now the learning rate is: 3.2389977377945766e-05
+2024-12-13 01:15:26,117 - INFO - begin training stage: [303/350]
+2024-12-13 01:15:27,659 - INFO - Epoch:[303/350] Step:[10/28] reconstruction_loss: 0.26 contra_loss: 3.28 contra_loss_cluster: 2.40
+2024-12-13 01:15:29,013 - INFO - Epoch:[303/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.28 contra_loss_cluster: 2.49
+2024-12-13 01:15:30,403 - INFO - now the learning rate is: 3.1480517778293714e-05
+2024-12-13 01:15:30,708 - INFO - begin training stage: [304/350]
+2024-12-13 01:15:32,305 - INFO - Epoch:[304/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.42
+2024-12-13 01:15:33,709 - INFO - Epoch:[304/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.55
+2024-12-13 01:15:35,131 - INFO - now the learning rate is: 3.058906661989924e-05
+2024-12-13 01:15:35,431 - INFO - begin training stage: [305/350]
+2024-12-13 01:15:36,991 - INFO - Epoch:[305/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.51
+2024-12-13 01:15:38,342 - INFO - Epoch:[305/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.50
+2024-12-13 01:15:39,729 - INFO - now the learning rate is: 2.9715695724894635e-05
+2024-12-13 01:15:40,035 - INFO - begin training stage: [306/350]
+2024-12-13 01:15:41,595 - INFO - Epoch:[306/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.49
+2024-12-13 01:15:42,939 - INFO - Epoch:[306/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.54
+2024-12-13 01:15:44,326 - INFO - now the learning rate is: 2.8860475458727692e-05
+2024-12-13 01:15:44,632 - INFO - begin training stage: [307/350]
+2024-12-13 01:15:46,200 - INFO - Epoch:[307/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.52
+2024-12-13 01:15:47,561 - INFO - Epoch:[307/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.52
+2024-12-13 01:15:48,989 - INFO - now the learning rate is: 2.8023474724492605e-05
+2024-12-13 01:15:49,327 - INFO - begin training stage: [308/350]
+2024-12-13 01:15:50,881 - INFO - Epoch:[308/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.45
+2024-12-13 01:15:52,243 - INFO - Epoch:[308/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.53
+2024-12-13 01:15:53,618 - INFO - now the learning rate is: 2.7204760957378448e-05
+2024-12-13 01:15:53,916 - INFO - begin training stage: [309/350]
+2024-12-13 01:15:55,450 - INFO - Epoch:[309/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.47
+2024-12-13 01:15:56,792 - INFO - Epoch:[309/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.46
+2024-12-13 01:15:58,153 - INFO - now the learning rate is: 2.6404400119236192e-05
+2024-12-13 01:15:58,455 - INFO - begin training stage: [310/350]
+2024-12-13 01:16:00,029 - INFO - Epoch:[310/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.50
+2024-12-13 01:16:01,387 - INFO - Epoch:[310/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.51
+2024-12-13 01:16:02,784 - INFO - now the learning rate is: 2.562245669326441e-05
+2024-12-13 01:16:03,096 - INFO - begin training stage: [311/350]
+2024-12-13 01:16:04,652 - INFO - Epoch:[311/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.48
+2024-12-13 01:16:06,014 - INFO - Epoch:[311/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.56
+2024-12-13 01:16:07,400 - INFO - now the learning rate is: 2.485899367881379e-05
+2024-12-13 01:16:07,699 - INFO - begin training stage: [312/350]
+2024-12-13 01:16:09,258 - INFO - Epoch:[312/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.28 contra_loss_cluster: 2.38
+2024-12-13 01:16:10,660 - INFO - Epoch:[312/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.25 contra_loss_cluster: 2.46
+2024-12-13 01:16:12,068 - INFO - now the learning rate is: 2.4114072586311514e-05
+2024-12-13 01:16:12,364 - INFO - begin training stage: [313/350]
+2024-12-13 01:16:13,916 - INFO - Epoch:[313/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.57
+2024-12-13 01:16:15,277 - INFO - Epoch:[313/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.54
+2024-12-13 01:16:16,661 - INFO - now the learning rate is: 2.338775343230565e-05
+2024-12-13 01:16:16,959 - INFO - begin training stage: [314/350]
+2024-12-13 01:16:18,526 - INFO - Epoch:[314/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.49
+2024-12-13 01:16:19,915 - INFO - Epoch:[314/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.51
+2024-12-13 01:16:21,316 - INFO - now the learning rate is: 2.2680094734629602e-05
+2024-12-13 01:16:21,623 - INFO - begin training stage: [315/350]
+2024-12-13 01:16:23,175 - INFO - Epoch:[315/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.53
+2024-12-13 01:16:24,573 - INFO - Epoch:[315/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.51
+2024-12-13 01:16:25,933 - INFO - now the learning rate is: 2.1991153507687403e-05
+2024-12-13 01:16:26,232 - INFO - begin training stage: [316/350]
+2024-12-13 01:16:27,788 - INFO - Epoch:[316/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.47
+2024-12-13 01:16:29,126 - INFO - Epoch:[316/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.51
+2024-12-13 01:16:30,578 - INFO - now the learning rate is: 2.1320985257860458e-05
+2024-12-13 01:16:30,871 - INFO - begin training stage: [317/350]
+2024-12-13 01:16:32,432 - INFO - Epoch:[317/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.48
+2024-12-13 01:16:33,777 - INFO - Epoch:[317/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.49
+2024-12-13 01:16:35,160 - INFO - now the learning rate is: 2.0669643979035297e-05
+2024-12-13 01:16:35,462 - INFO - begin training stage: [318/350]
+2024-12-13 01:16:37,047 - INFO - Epoch:[318/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.48
+2024-12-13 01:16:38,431 - INFO - Epoch:[318/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.49
+2024-12-13 01:16:39,796 - INFO - now the learning rate is: 2.0037182148253455e-05
+2024-12-13 01:16:40,137 - INFO - begin training stage: [319/350]
+2024-12-13 01:16:41,696 - INFO - Epoch:[319/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.48
+2024-12-13 01:16:43,048 - INFO - Epoch:[319/350] Step:[20/28] reconstruction_loss: 0.29 contra_loss: 3.29 contra_loss_cluster: 2.52
+2024-12-13 01:16:44,424 - INFO - now the learning rate is: 1.9423650721483547e-05
+2024-12-13 01:16:44,728 - INFO - begin training stage: [320/350]
+2024-12-13 01:16:46,288 - INFO - Epoch:[320/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.28 contra_loss_cluster: 2.43
+2024-12-13 01:16:47,648 - INFO - Epoch:[320/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.54
+2024-12-13 01:16:49,042 - INFO - now the learning rate is: 1.8829099129515972e-05
+2024-12-13 01:16:49,354 - INFO - eval data number: 3570
+2024-12-13 01:16:51,452 - INFO - loading query data ......
+2024-12-13 01:16:52,635 - INFO - retrieval costs: 3.2804102897644043
+2024-12-13 01:16:52,762 - INFO - hamming distance computation costs: 0.12681078910827637
+2024-12-13 01:16:52,870 - INFO - hamming ranking costs: 0.1086280345916748
+2024-12-13 01:16:52,871 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:16:53,076 - INFO - similarity labels generation costs: 0.20509123802185059
+2024-12-13 01:16:53,101 - INFO - topK: 5:, map: 0.24692374727668848
+2024-12-13 01:16:53,189 - INFO - topK: 20:, map: 0.18479319976487313
+2024-12-13 01:16:53,359 - INFO - topK: 40:, map: 0.14807626751638206
+2024-12-13 01:16:53,610 - INFO - topK: 60:, map: 0.12155033314285513
+2024-12-13 01:16:53,943 - INFO - topK: 80:, map: 0.10085903491932145
+2024-12-13 01:16:54,360 - INFO - topK: 100:, map: 0.08610998360729798
+2024-12-13 01:16:54,370 - INFO - begin training stage: [321/350]
+2024-12-13 01:16:55,944 - INFO - Epoch:[321/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.53
+2024-12-13 01:16:57,327 - INFO - Epoch:[321/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.45
+2024-12-13 01:16:58,697 - INFO - now the learning rate is: 1.825357527398016e-05
+2024-12-13 01:16:59,000 - INFO - begin training stage: [322/350]
+2024-12-13 01:17:00,557 - INFO - Epoch:[322/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.26 contra_loss_cluster: 2.48
+2024-12-13 01:17:01,907 - INFO - Epoch:[322/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.47
+2024-12-13 01:17:03,314 - INFO - now the learning rate is: 1.76971255234854e-05
+2024-12-13 01:17:03,620 - INFO - begin training stage: [323/350]
+2024-12-13 01:17:05,158 - INFO - Epoch:[323/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.42
+2024-12-13 01:17:06,505 - INFO - Epoch:[323/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.47
+2024-12-13 01:17:07,890 - INFO - now the learning rate is: 1.7159794709885074e-05
+2024-12-13 01:17:08,200 - INFO - begin training stage: [324/350]
+2024-12-13 01:17:09,768 - INFO - Epoch:[324/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.43
+2024-12-13 01:17:11,127 - INFO - Epoch:[324/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.39
+2024-12-13 01:17:12,481 - INFO - now the learning rate is: 1.664162612466453e-05
+2024-12-13 01:17:12,775 - INFO - begin training stage: [325/350]
+2024-12-13 01:17:14,336 - INFO - Epoch:[325/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.44
+2024-12-13 01:17:15,687 - INFO - Epoch:[325/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.42
+2024-12-13 01:17:17,052 - INFO - now the learning rate is: 1.6142661515453227e-05
+2024-12-13 01:17:17,372 - INFO - begin training stage: [326/350]
+2024-12-13 01:17:18,898 - INFO - Epoch:[326/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.53
+2024-12-13 01:17:20,238 - INFO - Epoch:[326/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 2.42
+2024-12-13 01:17:21,582 - INFO - now the learning rate is: 1.5662941082661357e-05
+2024-12-13 01:17:21,898 - INFO - begin training stage: [327/350]
+2024-12-13 01:17:23,460 - INFO - Epoch:[327/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.48
+2024-12-13 01:17:24,829 - INFO - Epoch:[327/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.50
+2024-12-13 01:17:26,208 - INFO - now the learning rate is: 1.520250347624071e-05
+2024-12-13 01:17:26,559 - INFO - begin training stage: [328/350]
+2024-12-13 01:17:28,126 - INFO - Epoch:[328/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.50
+2024-12-13 01:17:29,476 - INFO - Epoch:[328/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.28 contra_loss_cluster: 2.39
+2024-12-13 01:17:30,873 - INFO - now the learning rate is: 1.4761385792571103e-05
+2024-12-13 01:17:31,188 - INFO - begin training stage: [329/350]
+2024-12-13 01:17:32,767 - INFO - Epoch:[329/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.47
+2024-12-13 01:17:34,142 - INFO - Epoch:[329/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.29 contra_loss_cluster: 2.38
+2024-12-13 01:17:35,556 - INFO - now the learning rate is: 1.433962357147127e-05
+2024-12-13 01:17:35,860 - INFO - begin training stage: [330/350]
+2024-12-13 01:17:37,411 - INFO - Epoch:[330/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.25 contra_loss_cluster: 2.53
+2024-12-13 01:17:38,757 - INFO - Epoch:[330/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.49
+2024-12-13 01:17:40,143 - INFO - now the learning rate is: 1.3937250793335764e-05
+2024-12-13 01:17:40,428 - INFO - begin training stage: [331/350]
+2024-12-13 01:17:41,970 - INFO - Epoch:[331/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.28 contra_loss_cluster: 2.41
+2024-12-13 01:17:43,330 - INFO - Epoch:[331/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.47
+2024-12-13 01:17:44,707 - INFO - now the learning rate is: 1.3554299876396968e-05
+2024-12-13 01:17:45,008 - INFO - begin training stage: [332/350]
+2024-12-13 01:17:46,604 - INFO - Epoch:[332/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.49
+2024-12-13 01:17:47,967 - INFO - Epoch:[332/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.47
+2024-12-13 01:17:49,354 - INFO - now the learning rate is: 1.3190801674113567e-05
+2024-12-13 01:17:49,658 - INFO - begin training stage: [333/350]
+2024-12-13 01:17:51,210 - INFO - Epoch:[333/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.49
+2024-12-13 01:17:52,579 - INFO - Epoch:[333/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.41
+2024-12-13 01:17:53,978 - INFO - now the learning rate is: 1.2846785472684491e-05
+2024-12-13 01:17:54,272 - INFO - begin training stage: [334/350]
+2024-12-13 01:17:55,832 - INFO - Epoch:[334/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.25 contra_loss_cluster: 2.46
+2024-12-13 01:17:57,199 - INFO - Epoch:[334/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.47
+2024-12-13 01:17:58,580 - INFO - now the learning rate is: 1.2522278988689457e-05
+2024-12-13 01:17:58,879 - INFO - begin training stage: [335/350]
+2024-12-13 01:18:00,435 - INFO - Epoch:[335/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.51
+2024-12-13 01:18:01,779 - INFO - Epoch:[335/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.49
+2024-12-13 01:18:03,158 - INFO - now the learning rate is: 1.2217308366856003e-05
+2024-12-13 01:18:03,455 - INFO - begin training stage: [336/350]
+2024-12-13 01:18:05,021 - INFO - Epoch:[336/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.43
+2024-12-13 01:18:06,398 - INFO - Epoch:[336/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.48
+2024-12-13 01:18:07,790 - INFO - now the learning rate is: 1.1931898177952924e-05
+2024-12-13 01:18:08,100 - INFO - begin training stage: [337/350]
+2024-12-13 01:18:09,674 - INFO - Epoch:[337/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.54
+2024-12-13 01:18:11,035 - INFO - Epoch:[337/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.29 contra_loss_cluster: 2.52
+2024-12-13 01:18:12,459 - INFO - now the learning rate is: 1.1666071416810867e-05
+2024-12-13 01:18:12,764 - INFO - begin training stage: [338/350]
+2024-12-13 01:18:14,353 - INFO - Epoch:[338/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.47
+2024-12-13 01:18:15,718 - INFO - Epoch:[338/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.29 contra_loss_cluster: 2.36
+2024-12-13 01:18:17,091 - INFO - now the learning rate is: 1.1419849500469401e-05
+2024-12-13 01:18:17,388 - INFO - begin training stage: [339/350]
+2024-12-13 01:18:18,940 - INFO - Epoch:[339/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.46
+2024-12-13 01:18:20,302 - INFO - Epoch:[339/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.49
+2024-12-13 01:18:21,714 - INFO - now the learning rate is: 1.1193252266451754e-05
+2024-12-13 01:18:22,012 - INFO - begin training stage: [340/350]
+2024-12-13 01:18:23,585 - INFO - Epoch:[340/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.45
+2024-12-13 01:18:24,957 - INFO - Epoch:[340/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.46
+2024-12-13 01:18:26,379 - INFO - now the learning rate is: 1.098629797116643e-05
+2024-12-13 01:18:26,684 - INFO - eval data number: 3570
+2024-12-13 01:18:28,774 - INFO - loading query data ......
+2024-12-13 01:18:29,979 - INFO - retrieval costs: 3.2938289642333984
+2024-12-13 01:18:30,111 - INFO - hamming distance computation costs: 0.13178205490112305
+2024-12-13 01:18:30,223 - INFO - hamming ranking costs: 0.11255979537963867
+2024-12-13 01:18:30,223 - INFO - labels shape: (1530, 51) and (3570, 51)
+2024-12-13 01:18:30,438 - INFO - similarity labels generation costs: 0.21468400955200195
+2024-12-13 01:18:30,463 - INFO - topK: 5:, map: 0.2506557734204793
+2024-12-13 01:18:30,551 - INFO - topK: 20:, map: 0.1858606758533381
+2024-12-13 01:18:30,721 - INFO - topK: 40:, map: 0.14921441589829434
+2024-12-13 01:18:30,978 - INFO - topK: 60:, map: 0.122461465076695
+2024-12-13 01:18:31,316 - INFO - topK: 80:, map: 0.10139893955100378
+2024-12-13 01:18:31,731 - INFO - topK: 100:, map: 0.0864597500411174
+2024-12-13 01:18:31,740 - INFO - begin training stage: [341/350]
+2024-12-13 01:18:33,333 - INFO - Epoch:[341/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.51
+2024-12-13 01:18:34,691 - INFO - Epoch:[341/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.48
+2024-12-13 01:18:36,090 - INFO - now the learning rate is: 1.0799003288436426e-05
+2024-12-13 01:18:36,423 - INFO - begin training stage: [342/350]
+2024-12-13 01:18:37,968 - INFO - Epoch:[342/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.43
+2024-12-13 01:18:39,324 - INFO - Epoch:[342/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.46
+2024-12-13 01:18:40,670 - INFO - now the learning rate is: 1.063138330815566e-05
+2024-12-13 01:18:41,017 - INFO - begin training stage: [343/350]
+2024-12-13 01:18:42,561 - INFO - Epoch:[343/350] Step:[10/28] reconstruction_loss: 0.29 contra_loss: 3.27 contra_loss_cluster: 2.46
+2024-12-13 01:18:43,944 - INFO - Epoch:[343/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.51
+2024-12-13 01:18:45,335 - INFO - now the learning rate is: 1.0483451535073469e-05
+2024-12-13 01:18:45,635 - INFO - begin training stage: [344/350]
+2024-12-13 01:18:47,164 - INFO - Epoch:[344/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.43
+2024-12-13 01:18:48,490 - INFO - Epoch:[344/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.28 contra_loss_cluster: 2.41
+2024-12-13 01:18:49,865 - INFO - now the learning rate is: 1.0355219887706374e-05
+2024-12-13 01:18:50,171 - INFO - begin training stage: [345/350]
+2024-12-13 01:18:51,714 - INFO - Epoch:[345/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.53
+2024-12-13 01:18:53,082 - INFO - Epoch:[345/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.45
+2024-12-13 01:18:54,484 - INFO - now the learning rate is: 1.0246698697377927e-05
+2024-12-13 01:18:54,816 - INFO - begin training stage: [346/350]
+2024-12-13 01:18:56,350 - INFO - Epoch:[346/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.25 contra_loss_cluster: 2.47
+2024-12-13 01:18:57,739 - INFO - Epoch:[346/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.26 contra_loss_cluster: 2.50
+2024-12-13 01:18:59,129 - INFO - now the learning rate is: 1.0157896707386266e-05
+2024-12-13 01:18:59,483 - INFO - begin training stage: [347/350]
+2024-12-13 01:19:01,056 - INFO - Epoch:[347/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.26 contra_loss_cluster: 2.47
+2024-12-13 01:19:02,414 - INFO - Epoch:[347/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.39
+2024-12-13 01:19:03,801 - INFO - now the learning rate is: 1.0088821072299823e-05
+2024-12-13 01:19:04,167 - INFO - begin training stage: [348/350]
+2024-12-13 01:19:05,758 - INFO - Epoch:[348/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.51
+2024-12-13 01:19:07,137 - INFO - Epoch:[348/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.47
+2024-12-13 01:19:08,553 - INFO - now the learning rate is: 1.0039477357380746e-05
+2024-12-13 01:19:08,904 - INFO - begin training stage: [349/350]
+2024-12-13 01:19:10,474 - INFO - Epoch:[349/350] Step:[10/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.50
+2024-12-13 01:19:11,883 - INFO - Epoch:[349/350] Step:[20/28] reconstruction_loss: 0.28 contra_loss: 3.27 contra_loss_cluster: 2.43
+2024-12-13 01:19:13,387 - INFO - now the learning rate is: 1.0009869538136583e-05
+2024-12-13 01:19:13,744 - INFO - begin training stage: [350/350]
+2024-12-13 01:19:15,321 - INFO - Epoch:[350/350] Step:[10/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.53
+2024-12-13 01:19:16,673 - INFO - Epoch:[350/350] Step:[20/28] reconstruction_loss: 0.27 contra_loss: 3.27 contra_loss_cluster: 2.51
+2024-12-13 01:19:18,028 - INFO - now the learning rate is: 1e-05
