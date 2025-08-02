@@ -31,8 +31,8 @@ cd AAAI25-S5VH/
 - pytorch==2.0.1
 - torchvision==0.15.2
 - mamba-ssm==2.0.4
-- scipy==1.5.4
-- h5py==3.1.0
+- scipy==1.12.0
+- h5py==3.10.0
 - addict==2.4.0
 
 ### 2.2 Download the video feature datasets and organize them properly
@@ -387,3 +387,4 @@ and [SHC-IR](https://github.com/Wangld5/SHC-IR).
 
 ## 6. Contact
 If you have any question, you can raise an issue or email Jinpeng Wang (wjp20@mails.tsinghua.edu.cn). We will reply you soon.
+
